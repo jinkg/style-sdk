@@ -1,0 +1,1 @@
+include ':component2', ':sdk', ':component1'
