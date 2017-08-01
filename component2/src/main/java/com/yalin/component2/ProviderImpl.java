@@ -1,9 +1,10 @@
 package com.yalin.component2;
 
 import android.content.Context;
+import android.service.wallpaper.WallpaperService;
 
 import com.yalin.style.engine.IProvider;
-import com.yalin.style.engine.WallpaperServiceProxy;
+import com.yalin.style.engine.GLWallpaperServiceProxy;
 
 /**
  * @author jinyalin
@@ -12,7 +13,7 @@ import com.yalin.style.engine.WallpaperServiceProxy;
 
 public class ProviderImpl implements IProvider {
     @Override
-    public WallpaperServiceProxy provideProxy(Context host) {
+    public WallpaperService provideProxy(Context host) {
         return new MyGLWallpaperService(host);
     }
 }

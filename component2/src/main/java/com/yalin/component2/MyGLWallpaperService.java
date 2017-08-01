@@ -4,29 +4,27 @@ package com.yalin.component2;
 import android.content.Context;
 import android.service.wallpaper.WallpaperService;
 
-import com.yalin.style.engine.WallpaperServiceProxy;
-
-import net.rbgrn.android.glwallpaperservice.GLWallpaperService;
+import com.yalin.style.engine.GLWallpaperServiceProxy;
 
 /**
  * @author jinyalin
  * @since 2017/7/24.
  */
 
-public class MyGLWallpaperService extends WallpaperServiceProxy {
+public class MyGLWallpaperService extends GLWallpaperServiceProxy {
     public MyGLWallpaperService(Context host) {
         super(host);
     }
 
     @Override
     public WallpaperService.Engine onCreateEngine() {
-        return new MyEngine();
+        return new MyEngineGL();
     }
 
-    private class MyEngine extends ActiveEngine {
+    private class MyEngineGL extends GLActiveEngine {
         MyRenderer renderer;
 
-        public MyEngine() {
+        public MyEngineGL() {
             super();
             // handle prefs, other initialization
             renderer = new MyRenderer();

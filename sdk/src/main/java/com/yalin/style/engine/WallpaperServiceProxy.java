@@ -2,6 +2,7 @@ package com.yalin.style.engine;
 
 
 import android.content.Context;
+import android.service.wallpaper.WallpaperService;
 
 import net.rbgrn.android.glwallpaperservice.GLWallpaperService;
 
@@ -10,7 +11,7 @@ import net.rbgrn.android.glwallpaperservice.GLWallpaperService;
  * @since 2017/7/28.
  */
 
-public class WallpaperServiceProxy extends GLWallpaperService {
+public class WallpaperServiceProxy extends WallpaperService {
     public WallpaperServiceProxy(Context host) {
 
     }
@@ -20,7 +21,7 @@ public class WallpaperServiceProxy extends GLWallpaperService {
         return null;
     }
 
-    public class ActiveEngine extends GLEngine {
+    public class ActiveEngine extends Engine {
 
     }
 }

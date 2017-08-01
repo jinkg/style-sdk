@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply from: '../style_sdk.gradle'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
@@ -30,12 +31,3 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-task makeJar(type: Copy) {
-    delete 'build/libs/component1.jar'
-    from('build/intermediates/bundles/debug/')
-    into('build/libs/')
-    include('classes.jar')
-    rename('classes.jar', 'component1.jar')
-}
-
-makeJar.dependsOn(build)

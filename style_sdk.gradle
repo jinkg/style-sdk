@@ -1,0 +1,10 @@
+task makeJar(type: Copy) {
+    def jarName = project.name
+    delete "build/libs/${jarName}.jar"
+    from('build/intermediates/bundles/debug/')
+    into('build/libs/')
+    include('classes.jar')
+    rename('classes.jar', "${jarName}.jar")
+}
+
+makeJar.dependsOn(build)

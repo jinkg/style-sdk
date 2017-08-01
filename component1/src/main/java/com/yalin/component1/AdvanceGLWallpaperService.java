@@ -5,27 +5,27 @@ import android.service.wallpaper.WallpaperService;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 
-import com.yalin.style.engine.WallpaperServiceProxy;
+import com.yalin.style.engine.GLWallpaperServiceProxy;
 
 /**
  * @author jinyalin
  * @since 2017/7/24.
  */
 
-public class AdvanceGLWallpaperService extends WallpaperServiceProxy {
+public class AdvanceGLWallpaperService extends GLWallpaperServiceProxy {
     public AdvanceGLWallpaperService(Context host) {
         super(host);
     }
 
     @Override
     public WallpaperService.Engine onCreateEngine() {
-        return new AdvanceEngine();
+        return new AdvanceEngineGL();
     }
 
-    private class AdvanceEngine extends ActiveEngine {
+    private class AdvanceEngineGL extends GLActiveEngine {
         AdvanceRenderer renderer;
 
-        public AdvanceEngine() {
+        public AdvanceEngineGL() {
             super();
             renderer = new AdvanceRenderer(AdvanceGLWallpaperService.this);
             setRenderer(renderer);
