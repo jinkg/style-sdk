@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply from: '../style_sdk.gradle'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
@@ -30,17 +29,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    provided "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
-//    compile 'org.apache.commons:commons-math3:3.5'
+    compile 'org.apache.commons:commons-math3:3.5'
     provided project(':sdk')
     testCompile 'junit:junit:4.12'
-}
-
-task makeDependenciesJar(dependsOn: ['compileReleaseJavaWithJavac'], type: Jar){
-    archiveName = 'test.jar'
-    from('build/intermediates/classes/release')
-    from(project.zipTree("libs/commons-math3-3.5.jar"))
-    destinationDir = file('build/libs')
-    include('com/yalin/wallpaper/meter/**/*.class')
-    include('org/apache/commons/math3/**/*.class')
 }

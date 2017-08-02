@@ -29,9 +29,12 @@ dependencies {
     compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
+    compile project(':sdk')
 //    compile project(':livewallpaper3d')
 //    compile project(':rainbow_wallpaper')
 //    compile project(':camera_wallpaper')
-    compile project(':meter_wallpaper')
+//    compile project(':meter_wallpaper')
+//    compile project(':limitless_wallpaper')
+    compile project(':blurred_line_wallpaper')
     testCompile 'junit:junit:4.12'
 }

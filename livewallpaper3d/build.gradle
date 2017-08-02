@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply from: '../style_sdk.gradle'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
@@ -27,6 +26,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile 'com.badlogicgames.gdx:gdx:1.6.4'
+    compile 'com.badlogicgames.gdx:gdx-backend-android:1.6.4'
+
     compile project(':sdk')
     testCompile 'junit:junit:4.12'
 }

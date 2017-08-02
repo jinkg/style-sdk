@@ -22,6 +22,8 @@ android {
 }
 
 dependencies {
-//    compile project(':drippler_wallpaper')
-    compile project(':cube_wallpaper')
+//    compile project(':cube_wallpaper')
+//    compile project(':limitless_wallpaper')
+//    compile project(':blurred_line_wallpaper')
+    compile project(':sun_wallpaper')
 }
