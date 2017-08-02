@@ -1,10 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply from: '../style_sdk.gradle'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
     buildToolsVersion BUILD_TOOLS_VERSION as String
     defaultConfig {
-        applicationId "com.yalin.demo"
         minSdkVersion MIN_SDK_VERSION as int
         targetSdkVersion TARGET_SDK_VERSION as int
         versionCode APP_VERSION_CODE as int
@@ -19,6 +19,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -26,12 +30,17 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
-//    compile project(':livewallpaper3d')
-//    compile project(':rainbow_wallpaper')
-//    compile project(':camera_wallpaper')
-    compile project(':meter_wallpaper')
+    provided "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+//    compile 'org.apache.commons:commons-math3:3.5'
+    provided project(':sdk')
     testCompile 'junit:junit:4.12'
+}
+
+task makeDependenciesJar(dependsOn: ['compileReleaseJavaWithJavac'], type: Jar){
+    archiveName = 'test.jar'
+    from('build/intermediates/classes/release')
+    from(project.zipTree("libs/commons-math3-3.5.jar"))
+    destinationDir = file('build/libs')
+    include('com/yalin/wallpaper/meter/**/*.class')
+    include('org/apache/commons/math3/**/*.class')
 }

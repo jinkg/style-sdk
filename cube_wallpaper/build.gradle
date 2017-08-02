@@ -1,10 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply from: '../style_sdk.gradle'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
     buildToolsVersion BUILD_TOOLS_VERSION as String
     defaultConfig {
-        applicationId "com.yalin.demo"
         minSdkVersion MIN_SDK_VERSION as int
         targetSdkVersion TARGET_SDK_VERSION as int
         versionCode APP_VERSION_CODE as int
@@ -26,12 +26,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
-//    compile project(':livewallpaper3d')
-//    compile project(':rainbow_wallpaper')
-//    compile project(':camera_wallpaper')
-    compile project(':meter_wallpaper')
+    provided project(':sdk')
     testCompile 'junit:junit:4.12'
 }
+

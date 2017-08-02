@@ -7,7 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.yalin.wallpaper.rainbow.BokehRainbowWallpaper;
+import com.yalin.wallpaper.meter.MeterWallpaper;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
         intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                new ComponentName(this, BokehRainbowWallpaper.class));
+                new ComponentName(this, MeterWallpaper.class));
         startActivity(intent);
     }
 }
