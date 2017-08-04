@@ -27,5 +27,6 @@ dependencies {
 //    compile project(':blurred_line_wallpaper')
 //    compile project(':sun_wallpaper')
 //    compile project(':flower_wallpaper')
-    compile project(':hacker_wallpaper')
+//    compile project(':hacker_wallpaper')
+    compile project(':rainbow_wallpaper')
 }
