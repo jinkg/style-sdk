@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">yinyang_wallpaper</string>
+    <string name="error_shader_compiler">Yin Yang error; GLSL shader compiler not supported.</string>
+</resources>

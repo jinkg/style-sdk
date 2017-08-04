@@ -11,6 +11,8 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        renderscriptTargetApi TARGET_SDK_VERSION as int
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -26,6 +28,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+//    compile 'com.android.support:renderscript:25.0.2'
+//    compile "com.android.support:renderscript:${SUPPORT_LIBRARY_VERSION}"
 
     compile project(':sdk')
     testCompile 'junit:junit:4.12'
