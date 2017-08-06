@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">metaballs_walpaper</string>
+
+  <string name="error_shader_compiler">OpenGL error; GLSL shader compiler not supported.</string>
+</resources>

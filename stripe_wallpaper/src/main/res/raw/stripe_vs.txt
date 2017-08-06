@@ -1,0 +1,29 @@
+
+uniform vec2 uControlPts[4];
+uniform vec2 uWidth;
+uniform vec2 uAspectRatio;
+
+attribute vec2 aSplinePos;
+
+varying vec2 vLineCoord;
+
+void main() {
+	float t = aSplinePos.x;
+	
+	vec2 q0 = mix(uControlPts[0], uControlPts[1], t);
+	vec2 q1 = mix(uControlPts[1], uControlPts[2], t);
+	vec2 q2 = mix(uControlPts[2], uControlPts[3], t);
+	vec2 r0 = mix(q0, q1, t);
+	vec2 r1 = mix(q1, q2, t);
+	
+	vec2 pos = mix(r0, r1, t);
+	
+	vec2 normalVec = r1 - r0;
+	normalVec = normalize(vec2(-normalVec.y, normalVec.x));
+	
+	float width = (uWidth.x + aSplinePos.x * (uWidth.y - uWidth.x)) * 0.5;
+	pos += (aSplinePos.y * width) * normalVec * uAspectRatio;
+	
+	gl_Position = vec4(pos, 0.0, 1.0);
+	vLineCoord = aSplinePos;
+}

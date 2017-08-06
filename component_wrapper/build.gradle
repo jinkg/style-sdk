@@ -23,11 +23,15 @@ android {
 
 dependencies {
 //    compile project(':cube_wallpaper')
-//    compile project(':limitless_wallpaper')
+    compile project(':limitless_wallpaper')
 //    compile project(':blurred_line_wallpaper')
 //    compile project(':sun_wallpaper')
 //    compile project(':flower_wallpaper')
 //    compile project(':hacker_wallpaper')
 //    compile project(':rainbow_wallpaper')
-    compile project(':yinyang_wallpaper')
+//    compile project(':yinyang_wallpaper')
+//    compile project(':metaballs_wallpaper')
+//    compile project(':botz_wallpaper')
+//    compile project(':flier_wallpaper')
+//    compile project(':stripe_wallpaper')
 }

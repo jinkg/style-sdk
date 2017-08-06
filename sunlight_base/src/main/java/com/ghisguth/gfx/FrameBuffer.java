@@ -22,7 +22,8 @@ public class FrameBuffer {
 
     public void bind() {
         if (frameBuffer == 0) {
-            throw new RuntimeException("Cannot bind frameBuffer because it is not loaded");
+            Log.d(TAG, "Cannot bind frameBuffer because it is not loaded");
+            return;
         }
         GLES20.glBindFramebuffer(GLES20.GL_FRAMEBUFFER, frameBuffer);
     }

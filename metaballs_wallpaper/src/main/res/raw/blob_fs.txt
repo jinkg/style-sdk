@@ -1,0 +1,14 @@
+
+precision mediump float;
+uniform vec3 uColor;
+varying vec2 vPosition;
+
+void main() {
+	float d = length(vPosition);
+	if (d <= 1.0) {
+		d = (1.0 - d * d);
+		gl_FragColor = vec4(uColor * (d * d), d * d);
+	} else {
+		discard;
+	}
+}
