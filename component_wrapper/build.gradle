@@ -22,6 +22,7 @@ android {
 }
 
 dependencies {
+//    compile project(':livewallpaper3d')
 //    compile project(':cube_wallpaper')
 //    compile project(':limitless_wallpaper')
 //    compile project(':blurred_line_wallpaper')
@@ -35,5 +36,6 @@ dependencies {
 //    compile project(':flier_wallpaper')
 //    compile project(':stripe_wallpaper')
 //    compile project(':boids_wallpaper')
-    compile project(':bezierclock_wallpaper')
+//    compile project(':bezierclock_wallpaper')
+    compile project(':shark_wallpaper')
 }
