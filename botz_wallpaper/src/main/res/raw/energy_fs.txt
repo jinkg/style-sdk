@@ -1,0 +1,14 @@
+
+precision mediump float;
+uniform vec3 uColor1;
+uniform vec3 uColor2;
+uniform float uEnergy;
+varying vec2 vPosition;
+
+void main() {
+	if (vPosition.x < uEnergy) {
+		gl_FragColor = vec4(uColor1, 1.0);
+	} else {
+		gl_FragColor = vec4(uColor2, 1.0);
+	}
+}

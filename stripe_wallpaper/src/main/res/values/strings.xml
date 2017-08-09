@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">stripe_wallpaper</string>
+  <string name="error_shader_compiler">Stripes error; GLSL shader compiler not supported.</string>
+</resources>

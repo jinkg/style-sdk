@@ -1,0 +1,8 @@
+
+uniform mat3 uModelViewM;
+attribute vec2 aPosition;
+
+void main() {
+	vec3 pos = vec3(aPosition, 1.0) * uModelViewM;
+	gl_Position= vec4(pos.xy, 0.0, 1.0);
+}

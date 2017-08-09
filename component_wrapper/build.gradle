@@ -30,5 +30,9 @@ dependencies {
 //    compile project(':hacker_wallpaper')
 //    compile project(':rainbow_wallpaper')
 //    compile project(':yinyang_wallpaper')
+//    compile project(':metaballs_wallpaper')
+//    compile project(':botz_wallpaper')
+//    compile project(':flier_wallpaper')
+//    compile project(':stripe_wallpaper')
     compile project(':boids_wallpaper')
 }

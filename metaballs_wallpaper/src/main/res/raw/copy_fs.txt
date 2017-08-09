@@ -1,0 +1,18 @@
+
+precision mediump float;
+uniform sampler2D sTexture;
+uniform float uNoise;
+varying vec2 vTexPos;
+
+void main() {
+	gl_FragColor = texture2D(sTexture, vTexPos);
+	gl_FragColor = step(0.5, gl_FragColor) * 0.8;
+	
+	gl_FragColor.rgb = mix(gl_FragColor.rgb, vec3(1.0), 0.5);
+	gl_FragColor.rgb *= 1.0 - uNoise + sin(fract((vTexPos.y + uNoise * 0.02) * 100.0) * 3.1415) * uNoise;
+	
+	vec2 pos = vTexPos * 2.0 - 1.0;
+	float d = length(pos);
+	gl_FragColor.rgb *= 1.0 - smoothstep(0.2, 1.7, d);
+	
+}

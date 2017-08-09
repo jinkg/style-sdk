@@ -1,0 +1,14 @@
+
+precision mediump float;
+uniform vec3 uColor;
+uniform vec2 uLimits;
+varying vec2 vPosition;
+
+void main() {
+	float d = length(vPosition);
+	if (clamp(d, uLimits.x, uLimits.y) == d) {
+		gl_FragColor = vec4(uColor, 1.0);
+	} else {
+		discard;
+	}
+}
