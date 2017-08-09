@@ -34,5 +34,6 @@ dependencies {
 //    compile project(':botz_wallpaper')
 //    compile project(':flier_wallpaper')
 //    compile project(':stripe_wallpaper')
-    compile project(':boids_wallpaper')
+//    compile project(':boids_wallpaper')
+    compile project(':bezierclock_wallpaper')
 }
