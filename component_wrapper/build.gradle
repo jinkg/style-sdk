@@ -39,5 +39,6 @@ dependencies {
 //    compile project(':bezierclock_wallpaper')
 //    compile project(':shark_wallpaper')
 //    compile project(':lovebeat_wallpaper')
-    compile project(':cloth_wallpaper')
+//    compile project(':cloth_wallpaper')
+    compile project(':super_hexagon_wallpaper')
 }
