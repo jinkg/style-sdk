@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shader_background_vs">
+        attribute vec2 aPosition;
+        uniform vec2 uInterpolators;
+        uniform vec2 uPositions[2];
+        uniform vec2 uNormal;
+        void main() {
+            /* Calculate source and target positions, for interpolants 0 and 1 */
+            vec2 currentPos = mix(uPositions[0], uPositions[1], uInterpolators.x);
+            vec2 targetPos = mix(uPositions[0], uPositions[1], uInterpolators.y);
+            
+            /* aPosition.x is either 0 or 1 for adding interpolation */
+            currentPos += (targetPos - currentPos) * aPosition.x;
+            
+            /* aPosition.y is either 0 or 1 for adding normal translation */
+            currentPos += uNormal * aPosition.y;
+            
+            /* Finally store position for fragment shader */
+            gl_Position = vec4(currentPos, 0.0, 1.0);
+        }
+    </string>
+    <string name="shader_background_fs">
+        precision mediump float;
+        uniform vec3 uColor;
+        void main() {
+            /* Not much to do except set color */
+            gl_FragColor = vec4(uColor, 1.0);
+        }
+    </string>
+    <string name="shader_foreground_vs">
+        attribute vec2 aPosition;
+        uniform vec2 uAspectRatio;
+        uniform vec2 uCenterPos;
+        uniform vec2 uVectorUp;
+        uniform float uScale;
+        varying vec2 vPosition;
+        void main() {
+            /* Calculate normalized up and right vectors */
+            vec2 vecUp = normalize(uVectorUp);
+            vec2 vecRight = vec2(vecUp.y, -vecUp.x);
+            
+            /* Calculate box coordinates at origo */
+            vec2 pos = (aPosition.x * vecRight) + (aPosition.y * vecUp);
+            pos *= uAspectRatio * uScale;
+            
+            /* Translate box into its position */
+            pos += (uCenterPos.x * vecRight) + (uCenterPos.y * vecUp);
+            
+            /* Store position */
+            gl_Position = vec4(pos, 0.0, 1.0);
+            vPosition = aPosition;
+        }
+    </string>
+    <string name="shader_foreground_fs">
+        precision mediump float;
+        uniform vec3 uColor;
+        varying vec2 vPosition;
+        void main() {
+            /* First set default color */
+            gl_FragColor = vec4(uColor, 1.0);
+            
+            /* Crop portion of box are for border */
+            vec2 borderPos = (abs(vPosition) - 0.8) * 5.0;
+            borderPos = max(borderPos, vec2(0.0));
+            
+            /* Discard certain pixels for rounded corners */
+            if (length(borderPos) &gt; 1.0) {
+                discard;
+            }
+        }
+    </string>
+    <string name="shader_copy_vs">
+        attribute vec2 aPosition;
+        varying vec2 vTextureCoord;
+        void main() {
+            gl_Position = vec4(aPosition, 0.0, 1.0);
+            vTextureCoord = (gl_Position.xy + 1.0) * 0.5;
+        }
+    </string>
+    <string name="shader_copy_fs">
+        precision mediump float;
+        uniform sampler2D sTextureBg;
+        uniform sampler2D sTextureFg;
+        uniform vec2 uTouchPos[2];
+        uniform float uRandom;
+        varying vec2 vTextureCoord;
+        void main() {
+            /* Constants */
+            const float sqrt2 = 1.4143;
+            const float borderWidth = 1.2;
+            const float borderMaxLenInv = 1.0 / (sqrt2 - borderWidth);
+            
+            /* Displacement mapping calculations */
+            float c = 1.0 - sqrt(length(vTextureCoord - uTouchPos[1]));
+            vec2 texPos = vTextureCoord + c * (uTouchPos[0] - uTouchPos[1]);
+            
+            /* Fetch texture values */
+            vec4 colorBg = texture2D(sTextureBg, texPos);
+            vec4 colorFg = texture2D(sTextureFg, texPos);
+            gl_FragColor = mix(colorBg, colorFg, colorFg.a);
+            
+            /* Adjust pixel color with random coefficient */
+            float rand = fract(sin(dot(texPos.yy * 8.0 + uRandom, vec2(12.9898,78.233))) * 43758.5453);
+            gl_FragColor.rgb *= mix(0.73, 1.0, rand);
+            
+            /* Calculate pixel position from texture coordinate */
+            float pixelPos = length((vTextureCoord - 0.5) * 2.0);
+            /* If we are within border area */
+            if (pixelPos &gt; borderWidth) {
+                /* Calculate _rounded_ corners */
+                float shade = (pixelPos - borderWidth) * borderMaxLenInv;
+                float shadeMain = mod(shade * 6.0, 6.0);
+                float shadeBool = mod(shadeMain, 2.0);
+                float t;
+                if (clamp(shadeBool, 0.15, 1.0) == shadeBool) {
+                    t = 0.2;
+                } else if (clamp(shadeBool, 1.15, 2.0) == shadeBool) {
+                    t = 1.0 - sqrt(shadeMain * 0.1);
+                } else {
+                    t = (1.0 - sqrt(shadeMain * 0.1)) * 0.7;
+                }
+                gl_FragColor.rgb *= t;
+            }
+        }
+    </string>
+</resources>

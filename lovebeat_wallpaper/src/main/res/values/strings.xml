@@ -1,0 +1,3 @@
+<resources>
+    <string name="error_shader_compiler">LoveBeat error; GLSL shader compiler not supported.</string>
+</resources>
