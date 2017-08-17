@@ -42,5 +42,6 @@ dependencies {
 //    compile project(':cloth_wallpaper')
 //    compile project(':super_hexagon_wallpaper')
 //    compile project(':tic_tac_toe_wallpaper')
-    compile project(':doublehelix_wallpaper')
+//    compile project(':doublehelix_wallpaper')
+    compile project(':muhtraingle_wallpaper')
 }
