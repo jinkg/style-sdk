@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="default_clouds_manual">true</bool>
+    <bool name="default_day_night_cycle">true</bool>
+    <bool name="default_disable_toasts">true</bool>
+    <bool name="default_multisampling">true</bool>
+    <bool name="default_parallax_enabled">true</bool>
+    <bool name="default_rain_manual">true</bool>
+    <bool name="default_simulated_scrolling">true</bool>
+    <bool name="default_snow_manual">true</bool>
+    <bool name="default_wind_manual">true</bool>
+</resources>

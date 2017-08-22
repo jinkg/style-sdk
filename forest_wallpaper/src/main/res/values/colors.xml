@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_hill_color">#ff667f33</color>
+    <color name="default_mountain_color">#ff808080</color>
+    <color name="default_night_color">#ff5050ff</color>
+    <color name="default_sky_bottom_color">#ffe5fafe</color>
+    <color name="default_sky_top_color">#ff80e0ff</color>
+    <color name="default_tree_color">#ff3e5924</color>
+</resources>

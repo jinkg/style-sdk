@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pk_cloudiness">cloudiness</string>
+    <string name="pk_clouds_manual">clouds_manual</string>
+    <string name="pk_day_night_cycle">day_night_cycle</string>
+    <string name="pk_hill_color">hill_color</string>
+    <string name="pk_mountain_color">mountain_color</string>
+    <string name="pk_night_color">night_color</string>
+    <string name="pk_parallax_depth">parallax_depth</string>
+    <string name="pk_parallax_enabled">parallax_enabled</string>
+    <string name="pk_parallax_sensor_rate">parallax_sensor_rate</string>
+    <string name="pk_simulated_scrolling">simulated_scrolling</string>
+    <string name="pk_sky_bottom_color">sky_bottom_color</string>
+    <string name="pk_sky_top_color">sky_top_color</string>
+    <string name="pk_tree_color">tree_color</string>
+</resources>

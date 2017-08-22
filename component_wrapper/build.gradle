@@ -47,5 +47,6 @@ dependencies {
 //    compile project(':nightfal_windmill_wallpaper')
 //    compile project(':nightfal_rural_wallpaper')
 //    compile project(':chroma_wallpaper')
-    compile project(':genesis_wallpaper')
+//    compile project(':genesis_wallpaper')
+    compile project(':forest_wallpaper')
 }
