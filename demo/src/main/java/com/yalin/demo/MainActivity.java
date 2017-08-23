@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.maxelus.shadowgalaxylivewallpaper.WallpaperService;
+import com.microtech.magicwallpaper.MyWallpaperService;
+
+//import com.maxelus.shadowgalaxylivewallpaper.WallpaperService;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
         intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                new ComponentName(this, WallpaperService.class));
+                new ComponentName(this, MyWallpaperService.class));
         startActivity(intent);
     }
 }

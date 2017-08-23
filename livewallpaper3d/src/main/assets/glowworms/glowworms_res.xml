@@ -1,0 +1,82 @@
+<Resources>
+    
+    <Textures>
+        
+       <Texture
+          src="glowworms/1.png"
+          id="glowworm.1"/>
+       
+       <Texture
+          src="glowworms/2.png"
+          id="glowworm.2"/>
+       
+       <Texture
+          src="glowworms/3.png"
+          id="glowworm.3"/>
+       
+       <Texture
+          src="glowworms/4.png"
+          id="glowworm.4"/>
+       
+       <Texture
+          src="glowworms/5.png"
+          id="glowworm.5"/>
+       
+       <Texture
+          src="glowworms/6.png"
+          id="glowworm.6"/>
+       
+       <Texture
+          src="glowworms/7.png"
+          id="glowworm.7"/>
+       
+        
+    </Textures>
+    
+    <ObjectPrototypes>
+		
+		<SceneObjectSprite
+          id="glowworm.1"
+          width="1"
+          height="1"
+          texture="glowworm.1"/>
+		
+		<SceneObjectSprite
+          id="glowworm.2"
+          width="1"
+          height="1"
+          texture="glowworm.2"/>
+		
+		<SceneObjectSprite
+          id="glowworm.3"
+          width="1"
+          height="1"
+          texture="glowworm.3"/>
+		
+		<SceneObjectSprite
+          id="glowworm.4"
+          width="1"
+          height="1"
+          texture="glowworm.4"/>
+		
+		<SceneObjectSprite
+          id="glowworm.5"
+          width="1"
+          height="1"
+          texture="glowworm.5"/>
+		
+		<SceneObjectSprite
+          id="glowworm.6"
+          width="1"
+          height="1"
+          texture="glowworm.6"/>
+		
+		<SceneObjectSprite
+          id="glowworm.7"
+          width="1"
+          height="1"
+          texture="glowworm.7"/>
+				
+    </ObjectPrototypes>
+            
+</Resources>

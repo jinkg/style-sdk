@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    
+    <PortraitEye
+      position="0, 0, 10"
+      direction="0, 0, 0"
+      near="1"
+      far="10000"/>
+    
+    <LandscapeEye
+      position="0, 0, 10"
+      direction="0, 0, 0"
+      near="1.80"
+      far="10000"/>
+        
+    <SceneBehaviours></SceneBehaviours>
+    
+    <OnTouchBehaviours></OnTouchBehaviours>
+    
+    <World>
+	    <WindStd>
+	        <float>100</float>
+	        <float>0</float>
+	        <float>0</float>
+	    </WindStd>
+		<GravityStd>
+		    <float>0</float>
+		    <float>-100</float>
+		    <float>0</float>
+		</GravityStd>
+		<DensityStd>2</DensityStd>
+	</World>
+    
+    <Lights
+      ambientColor="0.6, 0.6, 0.6"
+      directionalLightColor="0.5, 0.5, 0.5"
+      directionalLightDirection="0.25, 0, 1"/>
+    
+    <BackgroundColor>0.33, 0.33, 0.33, 1</BackgroundColor>
+    
+    <UseBlending>true</UseBlending>
+    <UseDepthTest>false</UseDepthTest>
+    
+</Context>

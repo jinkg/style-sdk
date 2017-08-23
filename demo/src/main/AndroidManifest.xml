@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.maxelus.shadowgalaxylivewallpaper.WallpaperService"
+            android:name="com.microtech.magicwallpaper.MyWallpaperService"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />

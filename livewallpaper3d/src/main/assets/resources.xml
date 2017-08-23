@@ -1,0 +1,27 @@
+<Resources>
+    
+    <Textures>
+        
+        <Texture
+          id="smoke"
+          src="res/smoke.png"/>
+
+    </Textures>
+    
+    <Drawers>
+        <Drawer id="smokeDrawer" name=".SmokeDrawer"/>
+        <Drawer id="waterDrawer" name="com.amaxsoftware.lwpsengine.livewatereffect.WaterShader"/>
+    </Drawers>
+    
+    <ObjectPrototypes>
+        
+        <SceneObjectSprite
+          id="smoke"
+          texture="smoke"
+          width="1"
+          height="1"
+          drawer="smokeDrawer"/>
+        
+    </ObjectPrototypes>
+            
+</Resources>

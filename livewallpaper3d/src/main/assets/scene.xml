@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene>
+    
+    <SceneObjects>
+         
+        <SceneObjectSprite
+          id="bg"
+          texPos="1024, 0, 0, 1024, 1024"
+          position="0, 0, -500"
+          zindex="0"
+          scaling="1"/>
+                        
+    </SceneObjects>
+    
+    <!-- ========================================== -->
+    
+  	<RandomObjectsGroups>
+  	    
+  	    <RandomObjectsGroup
+          id="fog"
+          intensity="12">
+            
+            <Configurator name="Basic">
+                <Params>
+                    <SpeedFrom>-85, 65, 0</SpeedFrom>
+                    <SpeedTo>85, 75, 50</SpeedTo>
+                    <PositionFrom>-250, -600, -500</PositionFrom>
+                    <PositionTo>250, -600, -500</PositionTo>
+                    <ScalingFrom>250</ScalingFrom>
+                    <ScalingTo>300</ScalingTo>
+                    <ZIndexFrom>250</ZIndexFrom>
+                    <RotationFrom>-10, -10, -10</RotationFrom>
+                    <RotationTo>10, 10, 10</RotationTo>
+                    <AirResistanceFrom>0.001</AirResistanceFrom>
+                    <AirResistanceTo>0.0015</AirResistanceTo>
+                    <WeightFrom>-1</WeightFrom>
+                </Params>
+            </Configurator>
+            
+            <Behaviour name="Move"></Behaviour>
+            <Behaviour name="Gravity"></Behaviour>
+            <Behaviour name="AirResistance"></Behaviour>
+            <Behaviour name="Scaling">
+                <Params>
+                    <ScalingFrom>1, 1, 1</ScalingFrom>
+                    <ScalingTo>1.5, 1.5, 1.5</ScalingTo>
+                    <StartTime>1000</StartTime>
+                    <Period>5000</Period>
+                </Params>
+            </Behaviour>
+            <Behaviour name="LifeTime">
+                <Params>
+                    <LifeTime>6000</LifeTime>
+                </Params>
+            </Behaviour>
+            <Behaviour name="Rotation">
+                <Params>
+                    <RotationFrom>0, 0, -45</RotationFrom>
+                    <RotationTo>0, 0, 45</RotationTo>
+                </Params>
+            </Behaviour>
+            
+            <PrototypeId>smoke</PrototypeId>
+
+        </RandomObjectsGroup>
+        
+    </RandomObjectsGroups>
+    
+</Scene>
