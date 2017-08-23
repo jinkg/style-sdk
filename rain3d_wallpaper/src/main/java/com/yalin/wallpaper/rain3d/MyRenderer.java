@@ -30,8 +30,8 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
     private float[] f2909E = new float[9];
     private float[] f2910F = new float[9];
     private final String f2911G = "L1";
-    private int fgColor;
-    private int bgColor;
+    private int transLevel;
+    private int tiltLevel;
     private float[] f2914J = new float[3];
     private float[] f2915K = new float[3];
     private float f2916L;
@@ -180,8 +180,8 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
         return BitmapFactory.decodeResource(resources, i, options);
     }
 
-    private void setFgColor(int i) {
-        this.fgColor = i;
+    private void setTransLevel(int i) {
+        this.transLevel = i;
         m4192e();
     }
 
@@ -259,8 +259,8 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
         return this.f2949u;
     }
 
-    private void setBgColor(int i) {
-        this.bgColor = i;
+    private void setTiltLevel(int i) {
+        this.tiltLevel = i;
         m4192e();
         this.an = true;
     }
@@ -436,12 +436,12 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
 
     public void m4192e() {
         if (this.trails) {
-            this.f2906B = 256.0f - (256.0f - ((float) this.fgColor));
-            this.f2907C = (float) ((278 - this.bgColor) / 2);
+            this.f2906B = 256.0f - (256.0f - ((float) this.transLevel));
+            this.f2907C = (float) ((278 - this.tiltLevel) / 2);
             return;
         }
-        this.f2906B = (350.0f - ((float) this.fgColor)) / 1.0f;
-        this.f2907C = ((float) (350 - this.bgColor)) * 1.2f;
+        this.f2906B = (350.0f - ((float) this.transLevel)) / 1.0f;
+        this.f2907C = ((float) (350 - this.tiltLevel)) * 1.2f;
         Log.d("mgw", "tilt_level: " + this.f2906B);
         Log.d("mgw", "tran_level: " + this.f2907C);
     }
@@ -639,8 +639,8 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
         this.trails = false;
         this.invert = false;
         this.autoMove = false;
-        this.bgColor = 200;
-        this.fgColor = 200;
+        this.tiltLevel = 255;
+        this.transLevel = 255;
         this.af = (SensorManager) this.f2933e.getSystemService(Context.SENSOR_SERVICE);
         this.hasSensor = this.af.getDefaultSensor(Sensor.TYPE_GYROSCOPE) != null;
         if (!this.hasSensor) {
