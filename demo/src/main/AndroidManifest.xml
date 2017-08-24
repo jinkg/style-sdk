@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.driftwood.wallpaper.starlight.free.WallpaperStarlight"
+            android:name="com.driftwood.wallpaper.sleepypanda.free.LiveWallpaperAndroid"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
