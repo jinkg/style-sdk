@@ -51,5 +51,6 @@ dependencies {
 //    compile project(':forest_wallpaper')
 //    compile project(':sneakycat_wallpaper')
 //    compile project(':galaxy_wallpaper')
-    compile project(':rain3d_wallpaper')
+//    compile project(':rain3d_wallpaper')
+    compile project(':starlight_wallpaper')
 }
