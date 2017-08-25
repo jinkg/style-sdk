@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.submad.autumn.AutumnServicePro"
+            android:name="com.mosoyo.watergalaxy.MyLiveWallPaperService"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />

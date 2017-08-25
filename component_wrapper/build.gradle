@@ -55,5 +55,8 @@ dependencies {
 //    compile project(':starlight_wallpaper')
 //    compile project(':lazypanda_wallpaper')
 //    compile project(':panda_wallpaper')
-    compile project(':autumn_wallpaper')
+//    compile project(':autumn_wallpaper')
+//    compile project(':water01_wallpaper')
+//    compile project(':water02_wallpaper')
+    compile project(':water03_wallpaper')
 }
