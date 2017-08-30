@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="firstPicture">bg1</string>
+    <string name="title">Minima</string>
+    <string name="titlePro">Minima Pro</string>
+    <string name="PackageName">com.joko.minima</string>
+    <string name="ProPackageName">com.joko.minimapro</string>
+    <string name="PicDir">MinimaPics</string>
+    <string name="ServiceName">com.joko.wp.service.MyServiceMinimaFree</string>
+    <string name="service_display_name">Joko Wallpaper</string>
+    <string name="settings_title">Minima Settings</string>
+    <string name="descriptionText">Minima brings an endless range of shifting shapes and colors to your homescreen!</string>
+    <string name="randomize_version">0</string>
+    <string name="export_prefix_old">minima</string>
+    <string name="export_prefix">minima</string>
+    <string name="theme_list_file">ProfileActivity2</string>
+    <string name="AboutTitle">About %1$s</string>
+    <string name="AboutMessage">Thanks for using %1$s! If you\'ve got any comments, suggestions, or praise, please email us at joko.interactive@gmail.com.\n\nBig thanks to Rob Green for a great GL wallpaper base, and www.learnopengles.com for a nice set of OpenGL ES tutorials!</string>
+    <string name="ShowProMessage">%1$s enables many more configuration settings.  You can also save and share your custom themes, and download hundreds of user themes.</string>
+    <string name="ThemeManagerIntro">Try out the themes here to get an idea of what\'s possible, then create your own. Tap the \'Current\' thumbnail to save, so you can swap your favorites!\n\n[NEW FEATURE] Check out the new Online Themes section to see themes other users have shared. Sign in using the ACCOUNT button above to share your themes online and sync your themes across devices.</string>
+    <string name="ThemeManagerIntroFree">Try out the themes here to get an idea of what\'s possible.\n\n[NEW FEATURE] Check out the new Online Themes section to see themes other users have shared (PRO).</string>
+    <string name="BackupDir">Minima</string>
+    <string name="CommunityName">Minima</string>
+    <string name="LicenseTitle">Licenses</string>
+    <string name="Licenses"></string>
+    <string name="TroubleshootingTitle">Troubleshooting</string>
+    <string name="TroubleshootingMessage">Screen lag or stutter: We\'re always looking to improve performance, but if Minima is lagging or stuttering as you use your homescreen, visit the Quality, Tilt &amp; Scroll section, then choose a lower Display Quality setting.\n\nMinima disappears once in a while: Check to see if you have another app, like Tapet, resetting your wallpaper on a timer, and disable it.\n\nHomescreen centering issues: If Minima doesn\'t seem centered or all the shapes look askew, first try turning your display off and on again. If you\'re using the Google Now Launcher, navigate left to your Now page, then back. Finally, check the Quality, Tilt, &amp; Scroll section and manually choose a new center screen.\n\nTurn homescreen scrolling on or off: You can turn scrolling off completely in the Quality, Tilt &amp; Scroll section. If your launcher doesn\'t support scrolling, you can turn on a simulated version from the Quality, Tilt &amp; Scroll section.\n\nIf you still need assistance, please email us at joko.interactive@gmail.com, we\'d be happy to help.</string>
+    <string name="CurrentNotSetFormat">%1$s is not your current live wallpaper. Tap here to set.</string>
+    <string name="WhatsNew">3.0 Online Themes for PRO\n\nGeneral improvements to the Theme Manager. (FREE and PRO) \n\nCheck out the new Online Themes section in the Theme Manager. You can now browse themes shared by other users and share your own themes! (PRO)</string>
+    <string name="WhatsNewVersion">45</string>
+    <string name="MuzeiDescription">Do you even Minimuzei?</string>
+    <string name="muzei_settings_title">Minima Muzei Settings</string>
+    <string name="serviceName">@string/title</string>
+    <string name="RandomizeWidgetLabel">Minima Randomize</string>
+    <string name="buy_message">Buy Minima Pro</string>
+    <string name="information_about_message">Information about Minima</string>
 </resources>

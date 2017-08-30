@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="valsperring">
+        <item>bluebase</item>
+        <item>apink</item>
+        <item>magenta</item>
+        <item>red</item>
+        <item>mgreen</item>
+        <item>tblue</item>
+        <item>tgreen</item>
+        <item>norange</item>
+        <item>nred</item>
+        <item>npink</item>
+        <item>yellow</item>
+        <item>golden</item>
+        <item>yorange</item>
+        <item>pale</item>
+        <item>white</item>
+        <item>custom</item>
+    </array>
+</resources>

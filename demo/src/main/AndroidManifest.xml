@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.mosoyo.watergalaxy.MyLiveWallPaperService"
+            android:name="com.dc.bcgl3.DeepWallpaper"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />

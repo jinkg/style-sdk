@@ -58,5 +58,7 @@ dependencies {
 //    compile project(':autumn_wallpaper')
 //    compile project(':water01_wallpaper')
 //    compile project(':water02_wallpaper')
-    compile project(':water03_wallpaper')
+//    compile project(':water03_wallpaper')
+//    compile project(':hexagon_wallpaper')
+    compile project(':mystic_halo_wallpaper')
 }
