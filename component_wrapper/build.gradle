@@ -61,5 +61,6 @@ dependencies {
 //    compile project(':water03_wallpaper')
 //    compile project(':hexagon_wallpaper')
 //    compile project(':mystic_halo_wallpaper')
-    compile project(':analogclock_wallpaper')
+//    compile project(':analogclock_wallpaper')
+    compile project(':electric_plasma_wallpaper')
 }

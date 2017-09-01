@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.style_7.analogclocklivewallpaper_7.MyWallpaperService"
+            android:name="mjp.android.wallpaper.plasma.gl.GLPlasmaWallpaper"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
