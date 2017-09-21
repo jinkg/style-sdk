@@ -7,8 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.coolplay.controler.MyWallpaperListener;
-import com.mosoyo.wildanimals.MyLiveWallPaperService;
+import ru.serjik.hexshaders.LiveWallpaper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
         intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                new ComponentName(this, MyLiveWallPaperService.class));
+                new ComponentName(this, LiveWallpaper.class));
         startActivity(intent);
     }
 }

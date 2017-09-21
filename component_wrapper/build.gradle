@@ -66,5 +66,9 @@ dependencies {
 //    compile project(':animal3d_wolf_wallpaper')
 //    compile project(':animal3d_cat_wallpaper')
 //    compile project(':animal3d_horse_wallpaper')
-    compile project(':animal3d_eagle_wallpaper')
+//    compile project(':animal3d_eagle_wallpaper')
+//    compile project(':hexshader_fire_wallpaper')
+//    compile project(':hexshader_galaxy_wallpaper')
+//    compile project(':hexshader_kalizyl_wallpaper')
+    compile project(':hexshader_rainbow_wallpaper')
 }

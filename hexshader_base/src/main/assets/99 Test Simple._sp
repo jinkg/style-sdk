@@ -1,0 +1,30 @@
+// vertex shader
+#ifdef GL_ES
+//precision mediump float;
+#endif
+
+uniform mediump float u_size;
+uniform highp float iGlobalTime;
+uniform mediump vec2 iResolution;
+uniform mediump float u_offset;
+
+attribute mediump vec2 a_pos;
+attribute lowp vec4 a_col;
+varying lowp vec4 v_col;
+
+void main()
+{
+	v_col = a_col;
+	gl_PointSize = u_size;
+	gl_Position =  vec4(a_pos.x, a_pos.y, 1.0, 1.0);
+}
+
+====
+// fragment shader
+uniform lowp sampler2D u_texture;
+varying lowp vec4 v_col;
+
+void main()
+{
+	gl_FragColor = v_col * texture2D(u_texture, gl_PointCoord);
+}

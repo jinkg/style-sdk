@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.mosoyo.wildanimals.MyLiveWallPaperService"
+            android:name="ru.serjik.hexshaders.LiveWallpaper"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
