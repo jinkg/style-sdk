@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="mjp.android.wallpaper.plasma.gl.GLPlasmaWallpaper"
+            android:name="com.mosoyo.wildanimals.MyLiveWallPaperService"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />

@@ -1,0 +1,89 @@
+
+beer.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+t
+  rotate: false
+  xy: 0, 128
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 1
+t
+  rotate: false
+  xy: 0, 0
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 10
+t
+  rotate: false
+  xy: 170, 128
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 11
+t
+  rotate: false
+  xy: 170, 0
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 12
+t
+  rotate: false
+  xy: 340, 128
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 2
+t
+  rotate: false
+  xy: 340, 0
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 3
+t
+  rotate: false
+  xy: 510, 128
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 4
+t
+  rotate: false
+  xy: 510, 0
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 5
+t
+  rotate: false
+  xy: 680, 128
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 6
+t
+  rotate: false
+  xy: 680, 0
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 7
+t
+  rotate: false
+  xy: 850, 128
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 8
+t
+  rotate: false
+  xy: 850, 0
+  size: 170, 128
+  orig: 170, 128
+  offset: 0, 0
+  index: 9

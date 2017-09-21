@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import mjp.android.wallpaper.plasma.gl.GLPlasmaWallpaper;
-
+import com.coolplay.controler.MyWallpaperListener;
+import com.mosoyo.wildanimals.MyLiveWallPaperService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
         intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                new ComponentName(this, GLPlasmaWallpaper.class));
+                new ComponentName(this, MyLiveWallPaperService.class));
         startActivity(intent);
     }
 }

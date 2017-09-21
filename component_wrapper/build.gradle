@@ -62,5 +62,9 @@ dependencies {
 //    compile project(':hexagon_wallpaper')
 //    compile project(':mystic_halo_wallpaper')
 //    compile project(':analogclock_wallpaper')
-    compile project(':electric_plasma_wallpaper')
+//    compile project(':electric_plasma_wallpaper')
+//    compile project(':animal3d_wolf_wallpaper')
+//    compile project(':animal3d_cat_wallpaper')
+//    compile project(':animal3d_horse_wallpaper')
+    compile project(':animal3d_eagle_wallpaper')
 }
