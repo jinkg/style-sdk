@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.gilleland.software.pixelrain.PixelRain"
+            android:name="p029l.werner.livewallpaper.hypnosistimefree.MyWallpaperService"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
