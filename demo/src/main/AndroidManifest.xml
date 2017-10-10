@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="p029l.werner.livewallpaper.hypnosistimefree.MyWallpaperService"
+            android:name="com.yalin.livewallpaper3d.Galaxy"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />

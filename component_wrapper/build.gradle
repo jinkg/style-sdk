@@ -72,5 +72,10 @@ dependencies {
 //    compile project(':hexshader_kalizyl_wallpaper')
 //    compile project(':hexshader_rainbow_wallpaper')
 //    compile project(':pixelrain_wallpaper')
-    compile project(':hypnoclock_wallpaper')
+//    compile project(':hypnoclock_wallpaper')
+//    compile project(':galaxy01_wallpaper')
+//    compile project(':galaxy02_wallpaper')
+//    compile project(':galaxy03_wallpaper')
+//    compile project(':galaxy04_wallpaper')
+    compile project(':galaxy05_wallpaper')
 }
