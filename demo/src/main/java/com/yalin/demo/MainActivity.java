@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.yalin.livewallpaper3d.Galaxy;
+import com.androidwasabi.livewallpaper.xperiaz.XperiaZ;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
         intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                new ComponentName(this, Galaxy.class));
+                new ComponentName(this, XperiaZ.class));
         startActivity(intent);
     }
 }
