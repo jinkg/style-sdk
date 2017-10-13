@@ -32,9 +32,6 @@ public class C0108a {
     }
     this.f213a = new Texture(new C0063b(Gdx.files.internal("textures/background" + str + ".jpg"),
         null, null, false, 4448));
-    if (!String.valueOf(Gdx.files.internal("textures/background1.jpg").length()).equals("237578")) {
-      this.f213a = new Texture(1, 1, Format.RGB565);
-    }
     this.f215c = new TextureRegion(this.f213a, 1, 1, 1022, 1022);
   }
 

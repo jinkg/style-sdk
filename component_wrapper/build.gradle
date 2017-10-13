@@ -77,5 +77,8 @@ dependencies {
 //    compile project(':galaxy02_wallpaper')
 //    compile project(':galaxy03_wallpaper')
 //    compile project(':galaxy04_wallpaper')
-    compile project(':galaxy05_wallpaper')
+//    compile project(':galaxy05_wallpaper')
+    compile project(':wavez01_wallpaper')
+//    compile project(':wavez02_wallpaper')
+//    compile project(':wavez03_wallpaper')
 }
