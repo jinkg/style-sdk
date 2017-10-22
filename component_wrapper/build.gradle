@@ -82,5 +82,6 @@ dependencies {
 //    compile project(':wavez02_wallpaper')
 //    compile project(':wavez03_wallpaper')
     compile project(':dandelion01_wallpaper')
+//    compile project(':dandelion02_wallpaper')
 //    compile project(':feather_wallpaper')
 }
