@@ -20,7 +20,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    provided project(':sdk')
+    provided "com.kinglloy.style.developer:style-component-sdk:$DEVELOP_SDK_VERSION"
     compile project(':dandelion_base')
 }
 

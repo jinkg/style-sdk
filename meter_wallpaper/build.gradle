@@ -30,6 +30,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'org.apache.commons:commons-math3:3.5'
-    provided project(':sdk')
+    provided "com.kinglloy.style.developer:style-component-sdk:$DEVELOP_SDK_VERSION"
     testCompile 'junit:junit:4.12'
 }

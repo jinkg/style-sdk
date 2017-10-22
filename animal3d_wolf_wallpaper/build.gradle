@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    provided project(':sdk')
+    provided "com.kinglloy.style.developer:style-component-sdk:$DEVELOP_SDK_VERSION"
     compile project(':animal3d_base_wallpaper')
 }
 

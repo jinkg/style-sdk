@@ -29,7 +29,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    compile project(':sdk')
+    compile "com.kinglloy.style.developer:style-component-sdk:$DEVELOP_SDK_VERSION"
     compile project(':livewallpaper3d')
 //    compile project(':rainbow_wallpaper')
 //    compile project(':camera_wallpaper')
