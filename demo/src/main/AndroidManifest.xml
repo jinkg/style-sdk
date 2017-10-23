@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.androidwasabi.livewallpaper.feather.Feather"
+            android:name="com.yalin.wallpaper.tunnel3d01.TunnelService"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
