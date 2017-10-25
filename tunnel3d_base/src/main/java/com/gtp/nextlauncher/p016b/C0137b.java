@@ -9,7 +9,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 /* compiled from: SimulateEventManager */
 class C0137b extends C0136f implements Callback {
-    final /* synthetic */ C0134a f515a;
+    final /* synthetic */ SimulateEventManager f515a;
     private Handler f516d = new Handler(this);
     private int f517e = 0;
     private float[] f518f = new float[2];
@@ -26,9 +26,9 @@ class C0137b extends C0136f implements Callback {
     private long f529q = 500;
     private long f530r = 500;
 
-    public C0137b(C0134a c0134a) {
-        super(c0134a);
-        this.f515a = c0134a;
+    public C0137b(SimulateEventManager simulateEventManager) {
+        super(simulateEventManager);
+        this.f515a = simulateEventManager;
     }
 
     public void mo87a(long j) {

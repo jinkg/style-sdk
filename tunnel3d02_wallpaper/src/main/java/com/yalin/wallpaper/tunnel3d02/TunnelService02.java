@@ -1,4 +1,4 @@
-package com.yalin.wallpaper.tunnel3d01;
+package com.yalin.wallpaper.tunnel3d02;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -6,25 +6,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Message;
 
-import com.gtp.nextlauncher.liverpaper.tunnelbate.C0177g;
-import com.gtp.nextlauncher.liverpaper.tunnelbate.opengl.C0185f;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.TunnelRender;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.opengl.ModelData;
 import com.gtp.nextlauncher.liverpaper.tunnelbate.opengl.OpenGLES2WallpaperService;
 import com.gtp.nextlauncher.liverpaper.tunnelbate.p017a.C0146a;
-import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.C0157e;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.LoadUtil2;
 
 import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TunnelService extends OpenGLES2WallpaperService {
-    private C0177g f570c;
-    private C0185f f571d;
-    private C0185f f572e;
-    private C0185f f573f;
+public class TunnelService02 extends OpenGLES2WallpaperService {
+    private TunnelRender f570c;
+    private ModelData f571d;
+    private ModelData f572e;
+    private ModelData f573f;
     private C0146a f574g;
     private ExecutorService f575h;
 
-    public TunnelService(Context host) {
+    public TunnelService02(Context host) {
         super(host);
     }
 
@@ -55,14 +55,14 @@ public class TunnelService extends OpenGLES2WallpaperService {
     }
 
     public void m883b() {
-        PendingIntent service = PendingIntent.getService(getApplicationContext(), 0, new Intent(getApplicationContext(), TunnelService.class), 0);
+        PendingIntent service = PendingIntent.getService(getApplicationContext(), 0, new Intent(getApplicationContext(), TunnelService02.class), 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService("alarm");
         alarmManager.cancel(service);
         alarmManager.setRepeating(0, System.currentTimeMillis() + 300000, 28800000, service);
     }
 
-    public C0177g mo93c() {
-        this.f570c = new C0177g(getApplicationContext(), this.f571d, this.f572e);
+    public TunnelRender mo93c() {
+        this.f570c = new TunnelRender(getApplicationContext(), this.f571d, this.f572e);
         this.f570c.m1046a(m873d());
         this.f574g = new C0146a();
         this.f574g.m885a(this.f570c);
@@ -70,8 +70,8 @@ public class TunnelService extends OpenGLES2WallpaperService {
         return this.f570c;
     }
 
-    private C0185f m877a(String str) {
-        return C0157e.m924a(str, getResources(), getApplicationContext());
+    private ModelData m877a(String str) {
+        return LoadUtil2.m924a(str, getResources(), getApplicationContext());
     }
 
     private void m880f() {
@@ -98,9 +98,9 @@ public class TunnelService extends OpenGLES2WallpaperService {
     }
 
     class C0178i implements Runnable {
-        final /* synthetic */ TunnelService f773a;
+        final /* synthetic */ TunnelService02 f773a;
 
-        C0178i(TunnelService tunnelService) {
+        C0178i(TunnelService02 tunnelService) {
             this.f773a = tunnelService;
         }
 

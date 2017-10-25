@@ -1,4 +1,4 @@
-package com.yalin.wallpaper.tunnel3d01;
+package com.yalin.wallpaper.tunnel3d02;
 
 import android.content.Context;
 import android.service.wallpaper.WallpaperService;
@@ -13,6 +13,6 @@ import com.yalin.style.engine.IProvider;
 public class ProviderImpl implements IProvider {
     @Override
     public WallpaperService provideProxy(Context host) {
-        return new TunnelService01(host);
+        return new TunnelService02(host);
     }
 }

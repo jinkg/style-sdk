@@ -3,13 +3,14 @@ package com.gtp.nextlauncher.liverpaper.tunnelbate.opengl;
 import android.content.Context;
 import android.opengl.GLES20;
 
-import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.C0153a;
-import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.C0158f;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.TunnelConfig;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.CalculateUtil;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.ShaderUtil;
 
 import java.nio.FloatBuffer;
 
 /* compiled from: ModelObject */
-public class C0186g {
+public class ModelObject {
     int f818a;
     int f819b;
     int f820c;
@@ -19,16 +20,13 @@ public class C0186g {
     FloatBuffer f824g;
     FloatBuffer f825h;
     FloatBuffer f826i;
-    C0197r f827j;
+    Point f827j;
     int f828k = 0;
     float f829l = 0.0f;
     public float f830m = 0.0f;
     private float f831n = 0.0f;
     private boolean f832o = false;
     private boolean f833p = false;
-    private float f834q = 0.0f;
-    private float f835r = 0.0f;
-    private boolean f836s = true;
     private boolean f837t = false;
     private float f838u;
     private boolean f839v = false;
@@ -38,15 +36,14 @@ public class C0186g {
     }
 
     public void m1105b(boolean z) {
-        this.f836s = z;
     }
 
-    public C0186g(C0185f c0185f) {
-        this.f824g = c0185f.m1092b();
-        this.f825h = c0185f.m1093c();
-        this.f826i = c0185f.m1094d();
-        this.f827j = c0185f.m1095e();
-        this.f828k = c0185f.m1090a();
+    public ModelObject(ModelData modelData) {
+        this.f824g = modelData.m1092b();
+        this.f825h = modelData.m1093c();
+        this.f826i = modelData.m1094d();
+        this.f827j = modelData.m1095e();
+        this.f828k = modelData.m1090a();
     }
 
     public boolean m1102a() {
@@ -58,15 +55,14 @@ public class C0186g {
         float f = this.f827j.f891a;
         float f2 = this.f827j.f892b;
         float f3 = this.f827j.f893c;
-        boolean sensor = false;
-        if (!sensor && Math.abs(this.f830m) > 0.0f) {
+        if (!TunnelConfig.sensor && Math.abs(this.f830m) > 0.0f) {
             this.f830m = 0.0f;
         }
-        C0184e.m1081a(this.f830m, 0.0f, 0.0f, 1.0f);
-        C0184e.m1080a(f, f2, f3);
-        C0184e.m1081a(this.f829l, 0.0f, 1.0f, 0.0f);
-        C0184e.m1080a(-f, -f2, -f3);
-        GLES20.glUniformMatrix4fv(this.f819b, 1, false, C0184e.m1088d(), 0);
+        MatrixState.m1081a(this.f830m, 0.0f, 0.0f, 1.0f);
+        MatrixState.m1080a(f, f2, f3);
+        MatrixState.m1081a(this.f829l, 0.0f, 1.0f, 0.0f);
+        MatrixState.m1080a(-f, -f2, -f3);
+        GLES20.glUniformMatrix4fv(this.f819b, 1, false, MatrixState.m1088d(), 0);
         GLES20.glVertexAttribPointer(this.f820c, 3, 5126, false, 12, this.f824g);
         GLES20.glVertexAttribPointer(this.f821d, 2, 5126, false, 8, this.f825h);
         GLES20.glEnableVertexAttribArray(this.f821d);
@@ -84,9 +80,8 @@ public class C0186g {
         if (this.f839v) {
             this.f829l += this.f838u;
         }
-        boolean autoRun = false;
-        if (autoRun && !this.f837t) {
-            this.f829l = (C0153a.getAutoRunSpeed() * 0.25f) + this.f829l;
+        if (TunnelConfig.autoRun && !this.f837t) {
+            this.f829l = (CalculateUtil.getAutoRunSpeed() * 0.25f) + this.f829l;
         }
         if (this.f832o) {
             this.f832o = false;
@@ -108,9 +103,9 @@ public class C0186g {
 
     public void m1099a(Context context) {
         if (!this.f833p) {
-            this.f822e = C0158f.m927a("data/shader/vertex.sh", context.getResources());
-            this.f823f = C0158f.m927a("data/shader/frag.sh", context.getResources());
-            this.f818a = C0158f.m926a(this.f822e, this.f823f);
+            this.f822e = ShaderUtil.m927a("data/shader/vertex.sh", context.getResources());
+            this.f823f = ShaderUtil.m927a("data/shader/frag.sh", context.getResources());
+            this.f818a = ShaderUtil.m926a(this.f822e, this.f823f);
             this.f820c = GLES20.glGetAttribLocation(this.f818a, "aPosition");
             this.f819b = GLES20.glGetUniformLocation(this.f818a, "uMVPMatrix");
             this.f821d = GLES20.glGetAttribLocation(this.f818a, "aTexCoor");
@@ -175,7 +170,7 @@ public class C0186g {
         this.f838u = f;
     }
 
-    public C0197r m1114j() {
-        return new C0197r(528.9468f, 0.0f, -9.410217f);
+    public Point m1114j() {
+        return new Point(528.9468f, 0.0f, -9.410217f);
     }
 }

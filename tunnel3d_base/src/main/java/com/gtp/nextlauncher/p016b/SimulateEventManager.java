@@ -4,13 +4,13 @@ import android.opengl.GLSurfaceView;
 import android.os.SystemClock;
 import android.widget.ImageView;
 
-import com.gtp.nextlauncher.liverpaper.tunnelbate.C0177g;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.TunnelRender;
 
 import java.util.EmptyStackException;
 import java.util.Stack;
 
 /* compiled from: SimulateEventManager */
-public class C0134a {
+public class SimulateEventManager {
     String f497a;
     private C0141g f498b;
     private C0141g f499c;
@@ -21,14 +21,14 @@ public class C0134a {
     private C0140e f504h;
     private C0140e f505i;
     private C0139d f506j;
-    public Stack f507k;
-    public C0177g f508l;
+    public Stack<C0136f> f507k;
+    public TunnelRender f508l;
     public GLSurfaceView f509m;
     public ImageView f510n;
     public ImageView f511o;
     public ImageView f512p;
 
-    public Stack m814a() {
+    public Stack<C0136f> m814a() {
         return this.f507k;
     }
 
@@ -84,17 +84,17 @@ public class C0134a {
     public void m818d() {
         C0136f c0136f = null;
         try {
-            c0136f = (C0136f) this.f507k.pop();
+            c0136f = this.f507k.pop();
         } catch (EmptyStackException e) {
             m809e();
-            c0136f = (C0136f) this.f507k.pop();
+            c0136f = this.f507k.pop();
         }
         this.f508l.m1047a(c0136f);
         c0136f.mo88b(SystemClock.uptimeMillis());
     }
 
     public void m809e() {
-        Stack a = m814a();
+        Stack<C0136f> a = m814a();
         C0141g b = m816b(true);
         C0141g b2 = m816b(false);
         C0142h c = m817c();

@@ -8,9 +8,9 @@ import java.nio.FloatBuffer;
 import java.util.Stack;
 
 /* compiled from: MatrixState */
-public class C0184e {
+public class MatrixState {
     public static FloatBuffer f806a;
-    public static Stack f807b = new Stack();
+    public static Stack<float[]> f807b = new Stack<>();
     private static final float[] f808c = new float[16];
     private static float[] f809d = new float[16];
     private static float[] f810e;
@@ -27,7 +27,7 @@ public class C0184e {
     }
 
     public static void m1087c() {
-        f810e = (float[]) f807b.pop();
+        f810e = f807b.pop();
     }
 
     public static void m1080a(float f, float f2, float f3) {
@@ -70,7 +70,7 @@ public class C0184e {
 
     public static float[] m1084a(float[] fArr) {
         float[] r0 = new float[4];
-        Matrix.multiplyMV(r0, 0, C0184e.m1089e(), 0, new float[]{fArr[0], fArr[1], fArr[2], 1.0f}, 0);
+        Matrix.multiplyMV(r0, 0, MatrixState.m1089e(), 0, new float[]{fArr[0], fArr[1], fArr[2], 1.0f}, 0);
         return new float[]{r0[0], r0[1], r0[2]};
     }
 }

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /* compiled from: ImageUtil */
-public class C0156d {
+public class ImageUtil {
     public static int m923a(String assetName, Context context) {
         int i2 = 0;
         int i3 = 3553;

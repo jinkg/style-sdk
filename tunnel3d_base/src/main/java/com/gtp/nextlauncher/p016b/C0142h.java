@@ -6,7 +6,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 /* compiled from: SimulateEventManager */
 class C0142h extends C0136f {
-    final /* synthetic */ C0134a f560a;
+    final /* synthetic */ SimulateEventManager f560a;
     private long f561d;
     private long f562e;
     private Handler f563f;
@@ -16,9 +16,9 @@ class C0142h extends C0136f {
         this.f564g = fArr;
     }
 
-    public C0142h(C0134a c0134a, long j) {
-        super(c0134a);
-        this.f560a = c0134a;
+    public C0142h(SimulateEventManager simulateEventManager, long j) {
+        super(simulateEventManager);
+        this.f560a = simulateEventManager;
         this.f561d = j;
         this.f563f = new Handler(this);
     }

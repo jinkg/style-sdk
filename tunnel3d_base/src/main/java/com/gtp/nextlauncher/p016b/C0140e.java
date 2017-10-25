@@ -7,7 +7,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 /* compiled from: SimulateEventManager */
 class C0140e extends C0136f {
-    final /* synthetic */ C0134a f547a;
+    final /* synthetic */ SimulateEventManager f547a;
     private Handler f548d = new Handler(this);
     private float[] f549e = new float[2];
     private float[] f550f = new float[2];
@@ -15,9 +15,9 @@ class C0140e extends C0136f {
     private boolean f552h = false;
     private boolean f553i = true;
 
-    public C0140e(C0134a c0134a, boolean z) {
-        super(c0134a);
-        this.f547a = c0134a;
+    public C0140e(SimulateEventManager simulateEventManager, boolean z) {
+        super(simulateEventManager);
+        this.f547a = simulateEventManager;
         this.f553i = z;
     }
 

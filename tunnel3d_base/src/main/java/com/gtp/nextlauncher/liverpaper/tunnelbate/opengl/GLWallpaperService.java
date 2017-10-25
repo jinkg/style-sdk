@@ -2,7 +2,6 @@ package com.gtp.nextlauncher.liverpaper.tunnelbate.opengl;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
-import android.service.wallpaper.WallpaperService;
 import android.view.SurfaceHolder;
 
 import com.yalin.style.engine.WallpaperServiceProxy;
@@ -12,11 +11,11 @@ public abstract class GLWallpaperService extends WallpaperServiceProxy {
         super(host);
     }
 
-    public class C0182c extends ActiveEngine {
+    public class MyEngine extends ActiveEngine {
         final /* synthetic */ GLWallpaperService f803a;
-        private C0183d f804b;
+        private MySurfaceView f804b;
 
-        public C0182c(GLWallpaperService gLWallpaperService) {
+        public MyEngine(GLWallpaperService gLWallpaperService) {
             super();
             this.f803a = gLWallpaperService;
         }
@@ -27,7 +26,7 @@ public abstract class GLWallpaperService extends WallpaperServiceProxy {
 
         public void onCreate(SurfaceHolder surfaceHolder) {
             super.onCreate(surfaceHolder);
-            this.f804b = new C0183d(this.f803a);
+            this.f804b = new MySurfaceView(this.f803a);
         }
 
         public void onVisibilityChanged(boolean z) {
@@ -59,9 +58,9 @@ public abstract class GLWallpaperService extends WallpaperServiceProxy {
             return this.f804b;
         }
 
-        class C0183d extends GLSurfaceView {
+        class MySurfaceView extends GLSurfaceView {
 
-            C0183d(Context context) {
+            MySurfaceView(Context context) {
                 super(context);
             }
 

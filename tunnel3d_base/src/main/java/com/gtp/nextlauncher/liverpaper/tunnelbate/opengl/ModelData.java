@@ -7,17 +7,16 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 /* compiled from: ModelData */
-public class C0185f {
+public class ModelData {
     public int f813a;
     public FloatBuffer f814b;
     public FloatBuffer f815c;
     public FloatBuffer f816d;
-    public C0197r f817e;
+    public Point f817e;
 
-    public C0185f(Context context, float[] fArr, float[] fArr2, float[] fArr3, C0197r c0197r) {
-        this.f817e = c0197r;
+    public ModelData(Context context, float[] fArr, float[] fArr2, float[] fArr3, Point point) {
+        this.f817e = point;
         m1091a(fArr, fArr2, fArr3);
-        this.f817e.toString();
     }
 
     public void m1091a(float[] fArr, float[] fArr2, float[] fArr3) {
@@ -54,7 +53,7 @@ public class C0185f {
         return this.f816d;
     }
 
-    public C0197r m1095e() {
-        return new C0197r(528.9468f, 0.0f, -9.410217f);
+    public Point m1095e() {
+        return new Point(528.9468f, 0.0f, -9.410217f);
     }
 }

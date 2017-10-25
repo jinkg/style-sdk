@@ -8,7 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
 /* compiled from: ShaderUtil */
-public class C0158f {
+public class ShaderUtil {
     public static int m925a(int i, String str) {
         int glCreateShader = GLES20.glCreateShader(i);
         if (glCreateShader != 0) {
@@ -27,11 +27,11 @@ public class C0158f {
     }
 
     public static int m926a(String str, String str2) {
-        int a = C0158f.m925a(35633, str);
+        int a = ShaderUtil.m925a(35633, str);
         if (a == 0) {
             return 0;
         }
-        int a2 = C0158f.m925a(35632, str2);
+        int a2 = ShaderUtil.m925a(35632, str2);
         if (a2 == 0) {
             return 0;
         }

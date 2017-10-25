@@ -3,14 +3,14 @@ package com.gtp.nextlauncher.liverpaper.tunnelbate.opengl;
 import android.content.Context;
 import android.opengl.GLES20;
 
-import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.C0158f;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.ShaderUtil;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 /* compiled from: Cube */
-public class C0180a {
+public class Cube {
     int f775a;
     int f776b;
     int f777c;
@@ -23,7 +23,7 @@ public class C0180a {
     private float f784j;
     private float f785k;
 
-    public C0180a(Context context) {
+    public Cube(Context context) {
         this.f783i = 0;
         this.f784j = 0.0f;
         this.f785k = 0.0f;
@@ -54,17 +54,17 @@ public class C0180a {
     }
 
     public void m1067a(Context context) {
-        this.f779e = C0158f.m927a("data/shader/vertex.sh", context.getResources());
-        this.f780f = C0158f.m927a("data/shader/frag.sh", context.getResources());
-        this.f775a = C0158f.m926a(this.f779e, this.f780f);
+        this.f779e = ShaderUtil.m927a("data/shader/vertex.sh", context.getResources());
+        this.f780f = ShaderUtil.m927a("data/shader/frag.sh", context.getResources());
+        this.f775a = ShaderUtil.m926a(this.f779e, this.f780f);
         this.f777c = GLES20.glGetAttribLocation(this.f775a, "aPosition");
         this.f776b = GLES20.glGetUniformLocation(this.f775a, "uMVPMatrix");
         this.f778d = GLES20.glGetAttribLocation(this.f775a, "aTexCoor");
     }
 
-    public void m1066a(int i, C0197r c0197r, boolean z, boolean z2, float f) {
+    public void m1066a(int i, Point point, boolean z, boolean z2, float f) {
         GLES20.glUseProgram(this.f775a);
-        GLES20.glUniformMatrix4fv(this.f776b, 1, false, C0184e.m1088d(), 0);
+        GLES20.glUniformMatrix4fv(this.f776b, 1, false, MatrixState.m1088d(), 0);
         GLES20.glVertexAttribPointer(this.f777c, 3, 5126, false, 12, this.f781g);
         GLES20.glVertexAttribPointer(this.f778d, 2, 5126, false, 8, this.f782h);
         GLES20.glEnableVertexAttribArray(this.f777c);

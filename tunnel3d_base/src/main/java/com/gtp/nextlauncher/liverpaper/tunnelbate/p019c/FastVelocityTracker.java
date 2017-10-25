@@ -1,57 +1,46 @@
-package com.gtp.nextlauncher.scroller;
+package com.gtp.nextlauncher.liverpaper.tunnelbate.p019c;
 
 import android.view.MotionEvent;
 
 /* compiled from: FastVelocityTracker */
-public class C0219b {
-    final float[] f1046a = new float[10];
-    final float[] f1047b = new float[10];
-    final long[] f1048c = new long[10];
-    float f1049d;
-    float f1050e;
-    int f1051f;
+public class FastVelocityTracker {
+    final float[] f596a = new float[10];
+    final float[] f597b = new float[10];
+    final long[] f598c = new long[10];
+    float f599d;
+    float f600e;
+    int f601f;
 
-    public void m1308a() {
-        long[] jArr = this.f1048c;
-        for (int i = 0; i < 10; i++) {
-            jArr[i] = Long.MIN_VALUE;
-        }
-    }
-
-    public void m1311a(MotionEvent motionEvent) {
+    public void m922a(MotionEvent motionEvent) {
         int historySize = motionEvent.getHistorySize();
-        int i = this.f1051f + 1;
-        this.f1051f = i;
+        int i = this.f601f + 1;
+        this.f601f = i;
         if (i >= 10) {
-            this.f1051f = 0;
+            this.f601f = 0;
         }
         for (i = 0; i < historySize; i++) {
-            this.f1046a[this.f1051f] = motionEvent.getHistoricalX(i);
-            this.f1047b[this.f1051f] = motionEvent.getHistoricalY(i);
-            this.f1048c[this.f1051f] = motionEvent.getHistoricalEventTime(i);
-            int i2 = this.f1051f + 1;
-            this.f1051f = i2;
+            this.f596a[this.f601f] = motionEvent.getHistoricalX(i);
+            this.f597b[this.f601f] = motionEvent.getHistoricalY(i);
+            this.f598c[this.f601f] = motionEvent.getHistoricalEventTime(i);
+            int i2 = this.f601f + 1;
+            this.f601f = i2;
             if (i2 >= 10) {
-                this.f1051f = 0;
+                this.f601f = 0;
             }
         }
-        this.f1046a[this.f1051f] = motionEvent.getX();
-        this.f1047b[this.f1051f] = motionEvent.getY();
-        this.f1048c[this.f1051f] = motionEvent.getEventTime();
+        this.f596a[this.f601f] = motionEvent.getX();
+        this.f597b[this.f601f] = motionEvent.getY();
+        this.f598c[this.f601f] = motionEvent.getEventTime();
     }
 
-    public void m1309a(int i) {
-        m1310a(i, Float.MAX_VALUE);
-    }
-
-    public void m1310a(int i, float f) {
+    public void m921a(int i, float f) {
         float f2;
         int i2;
         int i3;
-        float[] fArr = this.f1046a;
-        float[] fArr2 = this.f1047b;
-        long[] jArr = this.f1048c;
-        int i4 = this.f1051f;
+        float[] fArr = this.f596a;
+        float[] fArr2 = this.f597b;
+        long[] jArr = this.f598c;
+        int i4 = this.f601f;
         if (jArr[i4] != Long.MIN_VALUE) {
             f2 = (float) (jArr[i4] - 200);
             i2 = ((i4 + 10) - 1) % 10;
@@ -94,15 +83,11 @@ public class C0219b {
             f5 = f2;
             f2 = f6;
         }
-        this.f1050e = f2 < 0.0f ? Math.max(f2, -f) : Math.min(f2, f);
-        this.f1049d = f5 < 0.0f ? Math.max(f5, -f) : Math.min(f5, f);
+        this.f600e = f2 < 0.0f ? Math.max(f2, -f) : Math.min(f2, f);
+        this.f599d = f5 < 0.0f ? Math.max(f5, -f) : Math.min(f5, f);
     }
 
-    public float m1312b() {
-        return this.f1050e;
-    }
-
-    public float m1313c() {
-        return this.f1049d;
+    public float m920a() {
+        return this.f600e;
     }
 }

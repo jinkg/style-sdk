@@ -13,11 +13,11 @@ import android.view.SurfaceHolder;
 import android.view.VelocityTracker;
 import android.view.WindowManager;
 
-import com.gtp.nextlauncher.liverpaper.tunnelbate.C0177g;
-import com.gtp.nextlauncher.liverpaper.tunnelbate.launcher.C0179a;
-import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.C0153a;
-import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.C0154b;
-import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.C0155c;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.TunnelRender;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.launcher.ILauncherEventListener;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.CalculateUtil;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.Constant;
+import com.gtp.nextlauncher.liverpaper.tunnelbate.p019c.FastVelocityTracker;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -31,7 +31,7 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
         super(host);
     }
 
-    public abstract C0177g mo93c();
+    public abstract TunnelRender mo93c();
 
     public Engine onCreateEngine() {
         this.f569a = new C0187h(this);
@@ -42,12 +42,12 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
         return this.f569a.m1077d();
     }
 
-    public class C0187h extends C0182c implements SensorEventListener, GestureDetector.OnGestureListener, C0179a {
+    public class C0187h extends MyEngine implements SensorEventListener, GestureDetector.OnGestureListener, ILauncherEventListener {
         private float f840A = 0.0f;
         private int f841B = -1;
         final /* synthetic */ OpenGLES2WallpaperService f842b;
-        private C0155c f843c;
-        private C0177g f844d;
+        private FastVelocityTracker f843c;
+        private TunnelRender f844d;
         private SensorManager f845e;
         private GestureDetector f846f;
         private boolean f848h;
@@ -58,8 +58,8 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
         private float f853m = 0.0f;
         private boolean f854n;
         private int f855o;
-        private C0197r f856p = new C0197r();
-        private C0197r f857q = new C0197r();
+        private Point f856p = new Point();
+        private Point f857q = new Point();
         private boolean f858r;
         private boolean f859s = false;
         private float f860t;
@@ -75,9 +75,9 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
             this.f842b = openGLES2WallpaperService;
         }
 
-        public C0155c m1135e() {
+        public FastVelocityTracker m1135e() {
             if (this.f843c == null) {
-                this.f843c = new C0155c();
+                this.f843c = new FastVelocityTracker();
             }
             return this.f843c;
         }
@@ -172,7 +172,7 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
             }
         }
 
-        private void m1118a(C0197r c0197r) {
+        private void m1118a(Point point) {
             if (!m1125i()) {
                 boolean sensor;
                 try {
@@ -182,8 +182,8 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
                     sensor = false;
                 }
                 if (sensor) {
-                    this.f864x = c0197r.f891a;
-                    if (Math.abs(this.f864x - this.f865y) > C0153a.m919d()) {
+                    this.f864x = point.f891a;
+                    if (Math.abs(this.f864x - this.f865y) > CalculateUtil.m919d()) {
                         sensor = true;
                     } else {
                         sensor = false;
@@ -192,7 +192,7 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
                     if (this.f844d != null) {
                         GLSurfaceView d = m1077d();
                         if (d != null) {
-                            d.queueEvent(new C0189j(this, sensor, c0197r));
+                            d.queueEvent(new C0189j(this, sensor, point));
                         }
                     }
                 }
@@ -229,7 +229,7 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
                             this.f852l = 0.0f;
                             this.f853m = 0.0f;
                         }
-                        m1135e().m921a(1000, C0154b.f594b);
+                        m1135e().m921a(1000, Constant.f594b);
                         if (Calendar.getInstance().getTimeInMillis() - this.f866z > 200) {
                             if (!m1125i()) {
                                 m1116a(this.f843c.m920a());
@@ -432,13 +432,13 @@ public abstract class OpenGLES2WallpaperService extends GLWallpaperService {
 
     class C0189j implements Runnable {
         final /* synthetic */ boolean f869a;
-        final /* synthetic */ C0197r f870b;
+        final /* synthetic */ Point f870b;
         final /* synthetic */ C0187h f871c;
 
-        C0189j(C0187h c0187h, boolean z, C0197r c0197r) {
+        C0189j(C0187h c0187h, boolean z, Point point) {
             this.f871c = c0187h;
             this.f869a = z;
-            this.f870b = c0197r;
+            this.f870b = point;
         }
 
         public void run() {

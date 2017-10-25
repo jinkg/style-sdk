@@ -8,16 +8,16 @@ import android.widget.RelativeLayout.LayoutParams;
 
 /* compiled from: SimulateEventManager */
 class C0141g extends C0136f implements Callback {
-    final /* synthetic */ C0134a f554a;
+    final /* synthetic */ SimulateEventManager f554a;
     private long f555d;
     private float f556e = -1.0f;
     private boolean f557f = false;
     private Handler f558g = null;
     private OvershootInterpolator f559h;
 
-    public C0141g(C0134a c0134a, long j, boolean z) {
-        super(c0134a);
-        this.f554a = c0134a;
+    public C0141g(SimulateEventManager simulateEventManager, long j, boolean z) {
+        super(simulateEventManager);
+        this.f554a = simulateEventManager;
         this.f555d = j;
         this.f558g = new Handler(this);
         this.f559h = new OvershootInterpolator();
@@ -33,7 +33,7 @@ class C0141g extends C0136f implements Callback {
         }
         if (i == 4 && i2 == 0) {
             Message message = new Message();
-            message.obj = Float.valueOf(f);
+            message.obj = f;
             message.what = 4;
             this.f558g.sendMessage(message);
         }
@@ -53,7 +53,7 @@ class C0141g extends C0136f implements Callback {
     public boolean handleMessage(Message message) {
         switch (message.what) {
             case 4:
-                m846a(((Float) message.obj).floatValue());
+                m846a((Float) message.obj);
                 break;
         }
         return false;

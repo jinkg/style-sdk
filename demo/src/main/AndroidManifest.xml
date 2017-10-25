@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.yalin.wallpaper.tunnel3d01.TunnelService"
+            android:name="com.yalin.livewallpaper3d.Dandelion02"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />

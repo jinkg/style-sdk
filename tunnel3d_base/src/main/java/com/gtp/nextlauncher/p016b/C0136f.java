@@ -11,12 +11,12 @@ import java.util.EmptyStackException;
 /* compiled from: SimulateEventManager */
 abstract class C0136f implements Callback, C0135h {
     public long f513b;
-    final /* synthetic */ C0134a f514c;
+    final /* synthetic */ SimulateEventManager f514c;
 
     abstract void mo88b(long j);
 
-    C0136f(C0134a c0134a) {
-        this.f514c = c0134a;
+    C0136f(SimulateEventManager simulateEventManager) {
+        this.f514c = simulateEventManager;
     }
 
     void m821b() {

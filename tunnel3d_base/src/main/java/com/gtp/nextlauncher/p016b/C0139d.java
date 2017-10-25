@@ -11,7 +11,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 /* compiled from: SimulateEventManager */
 class C0139d extends C0136f implements AnimationListener {
-    final /* synthetic */ C0134a f538a;
+    final /* synthetic */ SimulateEventManager f538a;
     private float[] f539d = new float[2];
     private Handler f540e = new Handler(this);
     private long f541f = 600;
@@ -21,9 +21,9 @@ class C0139d extends C0136f implements AnimationListener {
     private float f545j = 0.0f;
     private AnimationSet f546k = new AnimationSet(false);
 
-    public C0139d(C0134a c0134a) {
-        super(c0134a);
-        this.f538a = c0134a;
+    public C0139d(SimulateEventManager simulateEventManager) {
+        super(simulateEventManager);
+        this.f538a = simulateEventManager;
         Animation scaleAnimation = new ScaleAnimation(this.f542g, this.f543h, this.f542g, this.f543h, 1, 0.5f, 1, 0.5f);
         Animation alphaAnimation = new AlphaAnimation(this.f544i, this.f545j);
         this.f546k.addAnimation(scaleAnimation);
