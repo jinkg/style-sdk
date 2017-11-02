@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import jp.kzfactory.MK_Live2WP.LiveWallpaper;
+import com.livewallpaper.koipond.KoiPondService;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
         intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                new ComponentName(this, LiveWallpaper.class));
+                new ComponentName(this, KoiPondService.class));
         startActivity(intent);
     }
 }
