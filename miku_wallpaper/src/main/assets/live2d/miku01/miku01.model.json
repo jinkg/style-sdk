@@ -1,0 +1,375 @@
+{
+	"type":"Live2D Model Setting",
+	"name":"miku01",
+	"model":"miku01.moc",
+	"textures":
+	[
+		"miku01.1024/texture_00.png"
+	],
+	"physics":"miku01.physics.json",
+	"pose":"miku01.pose.json",
+	
+	"expressions":
+	[
+		{"name":"head_off","file":"motions/expressions/head_off.exp.json"},
+		{"name":"head_on","file":"motions/expressions/head_on.exp.json"},
+
+		{"name":"hot00","file":"motions/expressions/hot00.exp.json"},
+		{"name":"hot01","file":"motions/expressions/hot01.exp.json"},
+
+	 {"name":"f01","file":"motions/expressions/f01.exp.json"},
+	 {"name":"f02","file":"motions/expressions/f02.exp.json"},
+	 {"name":"f03","file":"motions/expressions/f03.exp.json"},
+	 {"name":"f04","file":"motions/expressions/f04.exp.json"},
+	 {"name":"f05","file":"motions/expressions/f05.exp.json"},
+	 {"name":"f06","file":"motions/expressions/f06.exp.json"},
+	 {"name":"f07","file":"motions/expressions/f07.exp.json"},
+	 {"name":"f08","file":"motions/expressions/f08.exp.json"},
+	 
+	 {"name":"f11","file":"motions/expressions/f11.exp.json"},
+	 {"name":"f12","file":"motions/expressions/f12.exp.json"},
+	 
+	 {"name":"b00","file":"motions/expressions/b00.exp.json"},
+	 {"name":"b01","file":"motions/expressions/b01.exp.json"},
+	 {"name":"b02","file":"motions/expressions/b02.exp.json"},
+     {"name":"b03","file":"motions/expressions/b03.exp.json"},
+
+	{"name":"charge00","file":"motions/expressions/c00.exp.json"},
+	{"name":"charge01","file":"motions/expressions/c01.exp.json"},
+
+	
+	{"name":"c00","file":"motions/cpu/c00.exp.json"},
+	{"name":"c01","file":"motions/cpu/c01.exp.json"},
+	{"name":"c02","file":"motions/cpu/c02.exp.json"},
+	{"name":"c03","file":"motions/cpu/c03.exp.json"},
+	{"name":"c04","file":"motions/cpu/c04.exp.json"},
+	{"name":"c05","file":"motions/cpu/c05.exp.json"},
+	{"name":"c06","file":"motions/cpu/c06.exp.json"},
+	{"name":"c07","file":"motions/cpu/c07.exp.json"},
+	{"name":"c08","file":"motions/cpu/c08.exp.json"},
+	{"name":"c09","file":"motions/cpu/c09.exp.json"},
+	{"name":"c10","file":"motions/cpu/c10.exp.json"},
+	
+	{"name":"r00","file":"motions/ram/r00.exp.json"},
+	{"name":"r01","file":"motions/ram/r01.exp.json"},
+	{"name":"r02","file":"motions/ram/r02.exp.json"},
+	{"name":"r03","file":"motions/ram/r03.exp.json"},
+	{"name":"r04","file":"motions/ram/r04.exp.json"},
+	{"name":"r05","file":"motions/ram/r05.exp.json"},
+	{"name":"r06","file":"motions/ram/r06.exp.json"},
+	{"name":"r07","file":"motions/ram/r07.exp.json"},
+	{"name":"r08","file":"motions/ram/r08.exp.json"},
+	{"name":"r09","file":"motions/ram/r09.exp.json"},
+	{"name":"r10","file":"motions/ram/r10.exp.json"},
+	
+	{"name":"w00","file":"motions/wifi/w00.exp.json"},
+	{"name":"w01","file":"motions/wifi/w01.exp.json"},
+	{"name":"w02","file":"motions/wifi/w02.exp.json"},
+	{"name":"w03","file":"motions/wifi/w03.exp.json"},
+	{"name":"w04","file":"motions/wifi/w04.exp.json"}
+
+	],
+	"layout":
+	{
+		"center_x":0.0,
+		"y":1.6,
+		"width":3.6
+	},
+	"hit_areas":
+	[
+		{"name":"all", "id":"D_REF.ALL"},
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"face", "id":"D_REF.FACE"},
+		{"name":"body", "id":"D_REF.BODY"},
+		{"name":"head_nade", "id":"D_REF.HEAD"},
+		{"name":"bust", "id":"D_REF.BUST"},
+		{"name":"hair1", "id":"D_HAIR_R1"},
+		{"name":"hair2", "id":"D_HAIR_R2"},
+		{"name":"hair3", "id":"D_HAIR_L1"},
+		{"name":"hair4", "id":"D_HAIR_L2"},
+		{"name":"arm_l", "id":"D_REF.ARM_L"},
+		{"name":"arm_r", "id":"D_REF.ARM_R"}
+		
+	],
+	"motions":
+	{
+		"idle":
+		[
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01.mtn" ,"fade_in":2000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_2.mtn" ,"fade_in":4000, "fade_out":1000},
+			{"file":"motions/idle/miku_idle_01_3.mtn" ,"fade_in":2000, "fade_out":3000},
+			{"file":"motions/idle/miku_idle_01_4.mtn" ,"fade_in":4000, "fade_out":4000},
+			{"file":"motions/idle/miku_idle_01_5.mtn" ,"fade_in":4000, "fade_out":4000},
+			{"file":"motions/idle/miku_idle_01_6.mtn" ,"fade_in":3000, "fade_out":3000},
+			{"file":"motions/idle/miku_idle_01_7.mtn" ,"fade_in":1200, "fade_out":1500},
+			{"file":"motions/idle/miku_idle_01_8.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/tap/miku_motion_10.mtn" ,"fade_in":2000, "fade_out":1500},
+			{"file":"motions/idle/miku_motion_demo01.mtn" ,"fade_in":1500, "fade_out":1500}
+		],
+
+		"idle_headphone":
+		[
+			{"file":"motions/idle/miku_idle_10.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_10.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_10.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_10.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_10.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_10.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_10.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_11.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_11.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_11.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_11.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_11.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_11.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_11.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_01_3.mtn" ,"fade_in":2000, "fade_out":3000},
+			{"file":"motions/idle/miku_idle_01_4.mtn" ,"fade_in":4000, "fade_out":4000},
+			{"file":"motions/idle/miku_idle_01_5.mtn" ,"fade_in":4000, "fade_out":4000},
+			{"file":"motions/idle/miku_idle_01_6.mtn" ,"fade_in":3000, "fade_out":3000},
+			{"file":"motions/idle/miku_idle_01_8.mtn" ,"fade_in":2000, "fade_out":2000}
+		],
+
+
+				
+		"idle_mid":
+		[
+			{"file":"motions/idle/miku_idle_02.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_02.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_02.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_02_2.mtn" ,"fade_in":2000, "fade_out":2000}
+		],
+		
+		"idle_low":
+		[
+			{"file":"motions/idle/miku_idle_03.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_03.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_03_2.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle/miku_idle_03_3.mtn" ,"fade_in":200, "fade_out":200}
+		],
+		"idle_sleep01":
+		[
+			{"file":"motions/idle/miku_idle_04.mtn" ,"fade_in":1500, "fade_out":1500}
+		],
+		"idle_sleep02":
+		[
+			{"file":"motions/idle/miku_idle_05.mtn" ,"fade_in":1500, "fade_out":1500}
+		],
+		"idle_sleepy":
+		[
+			{"file":"motions/idle/miku_idle_09.mtn" ,"fade_in":1500, "fade_out":1500}
+		],
+		"idle_stop":
+		[
+			{"file":"motions/idle/miku_idle_06.mtn" ,"fade_in":0, "fade_out":2000}
+		],
+		
+		"idle_muka":
+		[
+			{"file":"motions/idle/miku_idle_01_9.mtn" ,"fade_in":1000, "fade_out":2000}
+		],
+		
+		
+		"wakeup01":
+		[
+			{"file":"motions/tap/miku_motion_14.mtn" ,"fade_in":1000, "fade_out":1000, "sound":"sounds/altu_neoki.mp3"}
+		],
+		"wakeup02":
+		[
+			{"file":"motions/tap/miku_motion_15.mtn" ,"fade_in":1000, "fade_out":1000, "sound":"sounds/altu_neoki.mp3"}
+		],
+		"wakeup03":
+		[
+			{"file":"motions/tap/miku_motion_18.mtn" ,"fade_in":1000, "fade_out":1000, "sound":"sounds/altu_neoki.mp3"}
+		],
+		"tap_head":
+		[
+			{ "file":"motions/tap/miku_motion_13.mtn" ,"fade_in":300, "fade_out":300}
+		],
+		"wtap_head":
+		[
+			{ "file":"motions/tap/miku_motion_07.mtn" ,"fade_in":300, "fade_out":300 }
+		],
+		"tap_face":
+		[
+			{ "file":"motions/tap/miku_motion_27.mtn", "sound":"sounds/aha.mp3"},
+			{ "file":"motions/tap/miku_motion_01.mtn", "sound":"sounds/aha.mp3"}
+		],
+		"wtap_face":
+		[
+			{ "file":"motions/tap/miku_motion_05.mtn", "sound":"sounds/nanikayoudesuka.mp3"},
+			{ "file":"motions/tap/miku_motion_02.mtn", "sound":"sounds/ehehe.mp3"}
+		],
+		
+		"tap_body":
+		[
+			{ "file":"motions/voice/miku_voice_05.mtn"  },
+			{ "file":"motions/tap/miku_motion_09.mtn" },
+			{ "file":"motions/tap/miku_motion_10.mtn" }
+		],
+		"tap_bust":
+		[	
+			{ "file":"motions/tap/miku_motion_04.mtn", "sound":"sounds/hauu.mp3" }
+		],
+		"wtap_bust":
+		[	
+			{ "file":"motions/voice/miku_voice_06.mtn", "sound":"sounds/dokosawatteruno.mp3" }
+		],
+		"tap_arm":
+		[
+			{ "file":"motions/tap/miku_motion_26.mtn" }
+		],
+		"pinch_in":
+		[
+			{ "file":"motions/tap/miku_motion_06.mtn" },
+			{ "file":"motions/tap/miku_motion_16.mtn" }
+		],
+		"pinch_out":
+		[
+			{ "file":"motions/tap/miku_motion_30.mtn" }
+		],
+		"flick_hair_l":
+		[
+			{ "file":"motions/tap/miku_motion_35.mtn"  ,"fade_in":100, "fade_out":1000}
+		],
+		"flick_hair_r":
+		[
+			{ "file":"motions/tap/miku_motion_36.mtn"  ,"fade_in":100, "fade_out":1000}
+		],
+		"drag":
+		[
+			{ "file":"motions/tap/miku_motion_28.mtn" }
+		],
+		
+		"_comment": "壁紙設定後のモーション",
+		"start00":
+		[
+			{ "file":"motions/tap/miku_start_00.mtn"  ,"fade_in":0}
+		],
+		"start01":
+		[
+			{ "file":"motions/tap/miku_start_01_2.mtn"  ,"fade_in":0, "sound":"sounds/yahho.mp3"},
+			{ "file":"motions/tap/miku_start_01.mtn"  ,"fade_in":0, "sound":"sounds/konnitiwa_kabegamisettei_yorosikune.mp3"},
+			{ "file":"motions/tap/miku_start_01.mtn"  ,"fade_in":0, "sound":"sounds/konnitiwa_kabegamisettei_yorosikune.mp3"},
+			{ "file":"motions/tap/miku_start_01.mtn"  ,"fade_in":0, "sound":"sounds/konnitiwa_kabegamisettei_yorosikune.mp3"}
+		],
+		"start01_2":
+		[
+			{ "file":"motions/tap/miku_start_01.mtn"  ,"fade_in":0, "sound":"sounds/konnitiwa_kabegamisettei_yorosikune.mp3"}
+		],
+		"start02":
+		[
+			{ "file":"motions/tap/miku_start_02.mtn"  ,"fade_in":0}
+		],
+		
+		"_visible": "画面表示時モーション",
+		"Visibile":
+		[
+			{ "file":"motions/tap/miku_motion_17.mtn" ,"fade_in":300, "fade_out":1000},
+			{ "file":"motions/tap/miku_motion_23.mtn" ,"fade_in":300, "fade_out":1000},
+			{ "file":"motions/tap/miku_motion_24.mtn" ,"fade_in":300, "fade_out":1000},
+			{ "file":"motions/tap/miku_motion_25.mtn" ,"fade_in":300, "fade_out":1000},
+			{ "file":"motions/tap/miku_motion_26.mtn" ,"fade_in":300, "fade_out":1000},
+			{ "file":"motions/tap/miku_motion_20.mtn" ,"fade_in":300, "fade_out":1000}
+		],
+		
+		"_preview": "プレビュー時",
+		"preview01":
+		[
+			{ "file":"motions/voice/miku_voice_11.mtn" ,"fade_in":300, "fade_out":1000}
+		],
+		
+		"_konnitiwa": "こんにちわ",
+		"konnitiwa":
+		[
+			{ "file":"motions/voice/miku_voice_01.mtn", "sound":"sounds/konnichiwa.mp3"}
+		],
+		"_ohayou": "おはようございます",
+		"ohayou":
+		[
+			{ "file":"motions/voice/miku_voice_02.mtn", "sound":"sounds/ohayogozaimasu.mp3" }
+		],			
+		"_konbanwa": "こんばんわ",
+		"konbanwa":
+		[
+			{ "file":"motions/voice/miku_voice_03.mtn", "sound":"sounds/konbanwa.mp3"}
+		],
+		"_okaerinasai": "おかえりなさい",
+		"okaerinasai":
+		[
+			{ "file":"motions/voice/miku_voice_04.mtn", "sound":"sounds/okaerinasai.mp3"}
+		],
+		"_maildayo": "メールだよ",
+		"maildayo":
+		[
+			{ "file":"motions/voice/miku_voice_12.mtn", "sound":"sounds/maildayo.mp3"}
+		],
+		"connect":
+		[
+			{ "file":"motions/tap/miku_motion_34.mtn","fade_in":500 , "fade_out":1000}
+		],
+		"headphone":
+		[
+			{ "file":"motions/tap/miku_motion_37.mtn","fade_in":500, "fade_out":1000}
+		],
+		"headphone_off":
+		[
+			{ "file":"motions/tap/miku_motion_38.mtn","fade_in":500, "fade_out":1000}
+		],
+		
+		
+		
+		"shake":
+		[
+			{ "file":"motions/tap/miku_motion_21.mtn","fade_in":10 , "fade_out":1000, "sound":"sounds/hawawa.mp3"}
+		],
+		"flick":
+		[
+			{ "file":"motions/tap/miku_motion_12.mtn","fade_in":200 }
+		],
+		"katamuki":
+		[
+			{ "file":"motions/tap/miku_motion_22.mtn","fade_in":200 , "fade_out":500}
+		],
+		"face_flick":
+		[
+			{ "file":"motions/tap/miku_motion_31.mtn","fade_in":10, "sound":"sounds/hawawa_fun.mp3" }
+		],
+		"face_flick_R":
+		[
+			{ "file":"motions/tap/miku_motion_32.mtn","fade_in":10 , "sound":"sounds/hawawa_fun.mp3"}
+		],
+		"face_flick_L":
+		[
+			{ "file":"motions/tap/miku_motion_33.mtn","fade_in":10, "sound":"sounds/hawawa_fun.mp3" }
+		],
+		"head_nade":
+		[
+			{ "file":"motions/tap/miku_motion_03.mtn", "sound":"sounds/ehehe.mp3" }
+		],
+		"flick_arm":
+		[
+			{ "file":"motions/tap/miku_motion_28.mtn" }
+		],
+		"flick_head":
+		[
+			{ "file":"motions/tap/miku_motion_03.mtn" , "sound":"sounds/ehehe.mp3"}
+		]
+		
+		
+	}
+}

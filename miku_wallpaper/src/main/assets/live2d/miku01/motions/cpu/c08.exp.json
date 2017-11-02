@@ -1,0 +1,9 @@
+{
+	"type":"Live2D Expression",
+    "fade_in":0,
+    "fade_out":0,
+    "params":
+    [
+        { "id":"PARAM_CPU_10"			, "val":8.0 }
+    ]
+}

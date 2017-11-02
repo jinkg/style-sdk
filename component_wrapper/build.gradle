@@ -84,5 +84,6 @@ dependencies {
 //    compile project(':dandelion01_wallpaper')
 //    compile project(':dandelion02_wallpaper')
 //    compile project(':feather_wallpaper')
-    compile project(':tunnel3d01_wallpaper')
+//    compile project(':tunnel3d01_wallpaper')
+    compile project(':miku_wallpaper')
 }
