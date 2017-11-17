@@ -1,4 +1,4 @@
-package com.yalin.wallpaper.rain3d;
+package com.kinglloy.a3d_base;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -78,8 +78,8 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
     private boolean hasSensor;
     private float[] f2941m = new float[16];
     private float[] f2942n = new float[9];
-    boolean f2943o = true;
-    boolean f2944p = false;
+    public boolean f2943o = true;
+    public boolean f2944p = false;
     private float f2946r;
     final float f2948t = 57.29578f;
     private float[] f2949u;
@@ -88,6 +88,7 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
     private float f2952x;
     private Bitmap f2953y = null;
     private Bitmap f2954z = null;
+    private Settings settings;
 
     class C0868a extends TimerTask {
         final /* synthetic */ MyRenderer f2902a;
@@ -148,7 +149,7 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
         }
     }
 
-    public MyRenderer(Context context) {
+    public MyRenderer(Context context, Settings settings) {
         this.f2933e = context;
         this.f2925U[0] = 0.0f;
         this.f2925U[1] = 0.0f;
@@ -163,6 +164,8 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
         this.f2924T[7] = 0.0f;
         this.f2924T[8] = 1.0f;
         this.al = new C0871f[this.am];
+
+        this.settings = settings;
     }
 
     public static Bitmap m4165a(Resources resources, int i, int i2, int i3) {
@@ -372,9 +375,9 @@ public class MyRenderer implements GLSurfaceView.Renderer, SensorEventListener {
 //        m4167a(this.al[0], R.drawable.new_rain_0, f2904b);
 //        m4167a(this.al[1], R.drawable.new_rain_1, f2904b);
 //        m4167a(this.al[2], R.drawable.new_rain_2, f2904b);
-        m4167a(this.al[0], R.drawable.back, f2904b);
-        m4167a(this.al[1], R.drawable.a01, f2904b);
-        m4167a(this.al[2], R.drawable.a02, f2904b);
+        m4167a(this.al[0], settings.layer1, f2904b);
+        m4167a(this.al[1], settings.layer2, f2904b);
+        m4167a(this.al[2], settings.layer3, f2904b);
 
     }
 

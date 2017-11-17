@@ -86,5 +86,7 @@ dependencies {
 //    compile project(':feather_wallpaper')
 //    compile project(':tunnel3d01_wallpaper')
 //    compile project(':miku_wallpaper')
-    compile project(':koi_pond_wallpaper')
+//    compile project(':koi_pond_wallpaper')
+//    compile project(':matrix_3d_wallpaper')
+    compile project(':butterfly_3d_wallpaper')
 }
