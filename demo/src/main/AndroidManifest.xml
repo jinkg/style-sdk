@@ -18,7 +18,7 @@
         </activity>
 
         <service
-            android:name="com.dkeesto.neonmicrocosm.LWService"
+            android:name="me.jaksa.glsl.RayClockService"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
